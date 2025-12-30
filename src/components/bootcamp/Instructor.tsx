@@ -7,7 +7,7 @@ export function Instructor() {
     return (
         <section className="py-20 bg-background">
             <div className="container flex flex-col md:flex-row items-center gap-12">
-                <div className="relative w-full md:w-1/2 aspect-[4/5] max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative w-full md:w-1/2 aspect-4/5 max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
                     {/* Placeholder for Amir Yousry Image */}
                     <div className="absolute inset-0 bg-muted flex items-center justify-center text-muted-foreground">
                         <span className="text-xl font-bold">[Amir Yousry Photo]</span>

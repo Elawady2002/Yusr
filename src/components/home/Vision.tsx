@@ -27,7 +27,7 @@ export function Vision() {
             </div>
 
             {/* Pattern Overlay */}
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] bg-[length:20px_20px] mix-blend-overlay pointer-events-none" />
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] bg-size-[20px_20px] mix-blend-overlay pointer-events-none" />
         </section>
     );
 }

@@ -36,7 +36,7 @@ export function Curriculum() {
                     </p>
                 </div>
 
-                <div className="space-y-8 max-w-4xl mx-auto relative before:absolute before:inset-0 before:mr-[19px] before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-muted-foreground/20 before:to-transparent">
+                <div className="space-y-8 max-w-4xl mx-auto relative before:absolute before:inset-0 before:mr-[19px] before:h-full before:w-0.5 before:bg-linear-to-b before:from-transparent before:via-muted-foreground/20 before:to-transparent">
                     {modules.map((module, index) => (
                         <div key={index} className="relative flex items-start gap-6 group">
                             <div className="absolute right-0 flex items-center justify-center p-1 bg-background rounded-full border border-primary/20 shadow-sm z-10 group-hover:scale-110 transition-transform">
