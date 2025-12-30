@@ -28,7 +28,7 @@ export function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2 rtl:space-x-reverse">
                         <Image
-                            src="/logo.svg"
+                            src="/Yusr/logo.svg"
                             alt="Yusr Logo"
                             width={40}
                             height={40}
@@ -75,7 +75,7 @@ export function Navbar() {
                                     onClick={() => setIsOpen(false)}
                                 >
                                     <Image
-                                        src="/logo.svg"
+                                        src="/Yusr/logo.svg"
                                         alt="Yusr Logo"
                                         width={32}
                                         height={32}

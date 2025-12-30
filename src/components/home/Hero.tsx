@@ -78,7 +78,7 @@ export function Hero() {
                         {/* Hero Image */}
                         <div className="relative w-full h-full">
                             <Image
-                                src="/hero_section.png"
+                                src="/Yusr/hero_section.png"
                                 alt="تدريب عملي في بوتكامب تجربة المستخدم"
                                 fill
                                 className="object-cover"

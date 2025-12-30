@@ -9,7 +9,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <Link href="/" className="flex items-center space-x-2 rtl:space-x-reverse">
                             <Image
-                                src="/logo.svg"
+                                src="/Yusr/logo.svg"
                                 alt="Yusr Logo"
                                 width={40}
                                 height={40}
