@@ -44,7 +44,7 @@ export default function MeetupsPage() {
 
             {/* Upcoming Section */}
             <div className="mb-16">
-                <h2 className="text-2xl font-bold mb-6 border-r-4 border-primary pr-4">اللقاءات القادمة</h2>
+                <h2 className="text-2xl font-bold mb-6 text-center text-primary">اللقاءات القادمة</h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {upcomingMeetups.map((meetup) => (
                         <Card key={meetup.id} className="hover:shadow-md transition-shadow">
@@ -76,7 +76,7 @@ export default function MeetupsPage() {
 
             {/* Previous Section */}
             <div>
-                <h2 className="text-2xl font-bold mb-6 border-r-4 border-muted pr-4 text-muted-foreground">أرشيف اللقاءات</h2>
+                <h2 className="text-2xl font-bold mb-6 text-center text-muted-foreground">أرشيف اللقاءات</h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 opacity-80">
                     {previousMeetups.map((meetup) => (
                         <Card key={meetup.id}>
