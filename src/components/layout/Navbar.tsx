@@ -13,8 +13,8 @@ import { useState } from "react";
 
 const navigation = [
     { name: "الرئيسية", href: "/" },
-    { name: "البوتكامب", href: "/bootcamp" },
-    { name: "اللقاءات", href: "/meetups" },
+
+
     { name: "من نحن", href: "/about" },
 ];
 
@@ -54,7 +54,7 @@ export function Navbar() {
                 {/* Actions & Mobile Menu */}
                 <div className="flex items-center gap-4">
                     <Button asChild size="lg" className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-white font-bold px-8 rounded-md h-12">
-                        <Link href="/bootcamp">احجز مقعدك</Link>
+                        <Link href="https://whatsapp.com/channel/0029VajBHqo8qIzyWzK6S938" target="_blank">زيارة المجتمع</Link>
                     </Button>
 
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -94,8 +94,8 @@ export function Navbar() {
                                         </Link>
                                     ))}
                                     <Button asChild className="mt-4 w-full bg-primary text-white font-bold h-12">
-                                        <Link href="/bootcamp" onClick={() => setIsOpen(false)}>
-                                            احجز مقعدك
+                                        <Link href="https://whatsapp.com/channel/0029VajBHqo8qIzyWzK6S938" target="_blank" onClick={() => setIsOpen(false)}>
+                                            زيارة المجتمع
                                         </Link>
                                     </Button>
                                 </nav>

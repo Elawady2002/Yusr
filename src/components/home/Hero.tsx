@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { PlayCircle } from "lucide-react";
+import { PlayCircle, Users } from "lucide-react";
 
 export function Hero() {
     return (
@@ -17,18 +17,44 @@ export function Hero() {
                     transition={{ duration: 0.5 }}
                     className="flex flex-col items-start text-start space-y-8"
                 >
-                    <div className="inline-flex items-center rounded-full border bg-muted/30 px-4 py-1.5 text-sm font-medium text-muted-foreground">
-                        <span className="flex h-2 w-2 rounded-full bg-primary mr-2 ml-1 animate-pulse"></span>
-                        متاح الحجز الآن للدفعة القادمة
-                    </div>
+                    {/* Compact Social Proof Badge */}
+                    <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        className="inline-flex items-center gap-4 rounded-full border border-gray-100 bg-white px-3 py-2.5 shadow-xl shadow-gray-200/50 cursor-default mb-6"
+                    >
+                        <div className="flex -space-x-4 rtl:space-x-reverse">
+                            {[
+                                "https://i.pravatar.cc/120?img=32",
+                                "https://i.pravatar.cc/120?img=47",
+                                "https://i.pravatar.cc/120?img=12",
+                                "https://i.pravatar.cc/120?img=5"
+                            ].map((src, i) => (
+                                <div key={i} className="w-10 h-10 rounded-full border-[3px] border-white bg-gray-100 relative overflow-hidden ring-1 ring-gray-100">
+                                    <Image
+                                        src={src}
+                                        alt="User"
+                                        fill
+                                        className="object-cover"
+                                        sizes="40px"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex flex-col items-start pl-2">
+                            <div className="flex items-center gap-1.5 font-bold text-gray-900">
+                                <div className="flex text-yellow-500 text-sm">
+                                    {[1, 2, 3, 4, 5].map(s => <span key={s} className="drop-shadow-sm">★</span>)}
+                                </div>
+                                <span className="text-lg leading-none pt-1">500+</span>
+                            </div>
+                            <span className="text-xs font-semibold text-gray-500 leading-tight">مصمم انضموا إلينا</span>
+                        </div>
+                    </motion.div>
 
-                    <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-[1.2]">
-                        رحلتك لتصبح
+                    <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-[1.2]">
+                        بدل ما تتعلم كتير...
                         <br />
-                        مصمم
-                        <span className="text-primary px-2">تجربة مستخدم</span>
-                        <br />
-                        عالمي تبدأ هنا
+                        <span className="text-primary px-2">اتعلم بيُسر</span>
                     </h1>
 
                     <p className="text-lg text-muted-foreground md:text-2xl max-w-2xl leading-relaxed">
@@ -37,33 +63,14 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-4">
                         <Button size="lg" className="text-lg font-bold px-10 h-14 rounded-full shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all" asChild>
-                            <Link href="/bootcamp">تصفح البوتكامب</Link>
+                            <Link href="/about">من نحن</Link>
                         </Button>
-                        <Button size="lg" variant="outline" className="text-lg px-8 h-14 rounded-full border-2 hover:bg-muted/50 flex items-center gap-3" asChild>
-                            <Link href="/about">
-                                <PlayCircle className="w-6 h-6" />
-                                شاهد الفيديو التعريفي
+                        <Button size="lg" variant="outline" className="text-lg px-8 h-14 rounded-full border-2 hover:bg-muted/50 hover:text-primary flex items-center gap-3" asChild>
+                            <Link href="https://whatsapp.com/channel/0029VajBHqo8qIzyWzK6S938" target="_blank">
+                                <Users className="w-6 h-6" />
+                                <span className="font-bold">زيارة المجتمع</span>
                             </Link>
                         </Button>
-                    </div>
-
-                    {/* Social Proof */}
-                    <div className="pt-8 flex items-center gap-5">
-                        <div className="flex -space-x-4 rtl:space-x-reverse">
-                            {[1, 2, 3, 4].map(i => (
-                                <div key={i} className="w-12 h-12 rounded-full border-4 border-background bg-muted flex items-center justify-center text-xs font-bold text-muted-foreground overflow-hidden shadow-sm">
-                                    {/* Placeholder avatars */}
-                                    <div className="w-full h-full bg-gray-200"></div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex flex-col">
-                            <div className="flex items-center gap-1">
-                                <span className="font-black text-xl">+500</span>
-                                <span className="flex gap-0.5 text-yellow-500">★★★★★</span>
-                            </div>
-                            <span className="text-sm text-muted-foreground font-medium">مصمم انضموا إلينا</span>
-                        </div>
                     </div>
                 </motion.div>
 
@@ -78,7 +85,7 @@ export function Hero() {
                         {/* Hero Image */}
                         <div className="relative w-full h-full">
                             <Image
-                                src="/Yusr/hero_section.png"
+                                src="/Yusr/assets/photoـamir.jpg"
                                 alt="تدريب عملي في بوتكامب تجربة المستخدم"
                                 fill
                                 className="object-cover"
@@ -87,19 +94,18 @@ export function Hero() {
                         </div>
 
                         {/* Floating Card */}
-                        <div className="absolute bottom-8 left-8 right-8 bg-white/80 backdrop-blur-md border border-white/40 p-5 rounded-2xl shadow-lg flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
-                            <div className="flex items-center gap-4">
-                                <div className="h-14 w-14 rounded-full bg-[#E8F5E9] flex items-center justify-center text-primary">
-                                    <PlayCircle className="w-7 h-7 fill-primary stroke-none" />
+                        <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl border border-white/50 p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
+                            <div className="flex items-center gap-5">
+                                <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                    <PlayCircle className="w-7 h-7 fill-current" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-base text-gray-900">ورش عمل تفاعلية</p>
-                                    <p className="text-sm text-gray-500">أكثر من 20 ساعة تطبيق عملي</p>
+                                    <p className="font-bold text-lg text-foreground mb-0.5">ورش عمل تفاعلية</p>
+                                    <p className="text-sm font-medium text-muted-foreground">أكثر من 20 ساعة تطبيق عملي</p>
                                 </div>
                             </div>
-                            <div className="w-16 h-16 relative">
-                                {/* Mini chart or visual decoration */}
-                                <span className="absolute inset-0 rounded-full border-4 border-primary/20 border-t-primary animate-spin-slow"></span>
+                            <div className="w-12 h-12 relative shrink-0">
+                                <span className="absolute inset-0 rounded-full border-[3px] border-primary/20 border-t-primary animate-spin-slow"></span>
                             </div>
                         </div>
                     </div>

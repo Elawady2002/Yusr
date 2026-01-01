@@ -24,8 +24,7 @@ export function Footer() {
                     <div>
                         <h3 className="mb-4 text-sm font-bold text-gray-200">روابط سريعة</h3>
                         <ul className="space-y-3 text-sm text-gray-400">
-                            <li><Link href="/bootcamp" className="hover:text-primary transition-colors">البوتكامب</Link></li>
-                            <li><Link href="/meetups" className="hover:text-primary transition-colors">اللقاءات</Link></li>
+                            <li><Link href="/" className="hover:text-primary transition-colors">الرئيسية</Link></li>
                             <li><Link href="/about" className="hover:text-primary transition-colors">من نحن</Link></li>
                             <li><Link href="/contact" className="hover:text-primary transition-colors">اتصل بنا</Link></li>
                         </ul>
@@ -34,9 +33,9 @@ export function Footer() {
                     <div>
                         <h3 className="mb-4 text-sm font-bold text-gray-200">تواصل معنا</h3>
                         <ul className="space-y-3 text-sm text-gray-400">
-                            <li>القاهرة، مصر</li>
-                            <li>hello@yusr.com</li>
-                            <li dir="ltr">+20 100 000 0000</li>
+                            <li>الزقازيق، الشرقية</li>
+                            <li>withamiruiux@gmail.com</li>
+                            <li dir="ltr" className="text-right">+20 100 000 0000</li>
                         </ul>
                     </div>
 
@@ -44,9 +43,8 @@ export function Footer() {
                         <h3 className="mb-4 text-sm font-bold text-gray-200">تابعنا</h3>
                         <div className="flex items-center gap-4 text-gray-400">
                             {/* Social Placeholders */}
-                            <Link href="#" className="hover:text-primary transition-colors">Behance</Link>
-                            <Link href="#" className="hover:text-primary transition-colors">LinkedIn</Link>
-                            <Link href="#" className="hover:text-primary transition-colors">Instagram</Link>
+                            <Link href="https://www.linkedin.com/company/%D9%8A%D9%8F%D8%B3%D8%B1/" target="_blank" className="hover:text-primary transition-colors">LinkedIn</Link>
+                            <Link href="https://www.facebook.com/share/1C3KW4SG34/" target="_blank" className="hover:text-primary transition-colors">Facebook</Link>
                         </div>
                     </div>
                 </div>

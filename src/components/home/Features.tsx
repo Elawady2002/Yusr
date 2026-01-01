@@ -5,45 +5,42 @@ import { BookOpen, Users, Award } from "lucide-react";
 
 const features = [
     {
-        icon: <BookOpen className="w-8 h-8 text-primary" />,
-        title: "تعلم عملي عميق",
-        description: "نبتعد عن التنظير الممل ونركز على التطبيق العملي في كل خطوة.",
-        bg: "bg-primary/5",
+        icon: BookOpen,
+        title: "تطبيق عملي 100%",
+        description: "لا نضيع وقتك بالنظريات المعقدة. نركز على التطبيق الفعلي على مشاريع حقيقية تحاكي تحديات سوق العمل.",
     },
     {
-        icon: <Users className="w-8 h-8 text-secondary" />,
-        title: "إرشاد مهني (Mentorship)",
-        description: "متابعة دورية مع أمير يسري لضمان تطورك المهني وتوجيهك الصحيح.",
-        bg: "bg-secondary/5",
+        icon: Users,
+        title: "توجيه شخصي (Mentorship)",
+        description: "أنت لست وحدك. احصل على متابعة مستمرة وتوجيه مباشر لتصحيح مسارك وتطوير نقاط قوتك.",
     },
     {
-        icon: <Award className="w-8 h-8 text-accent" />,
-        title: "شهادة معتمدة",
-        description: "احصل على شهادة إتمام تعزز من سيرتك الذاتية وتفتح لك أبواب التوظيف.",
-        bg: "bg-accent/5",
+        icon: Award,
+        title: "تأهيل لسوق العمل",
+        description: "لا نمنحك مجرد شهادة، بل نساعدك في بناء ملف أعمال (Portfolio) قوي يجعلك المرشح الأفضل للوظائف.",
     },
 ];
 
 export function Features() {
     return (
         <section className="py-20 bg-background">
-            <div className="container max-w-6xl mx-auto">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4">لماذا تختار بوتكامب يُسر؟</h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
-                        صممنا هذه التجربة التعليمية لتكون الجسر الفاصل بين ما أنت عليه الآن وبين طموحك لتكون مصمم محترف.
+            <div className="container max-w-6xl mx-auto px-4">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-extrabold mb-4">لماذا تبدأ رحلتك مع يُسر؟</h2>
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                        صممنا هذه التجربة التعليمية لتختصر عليك سنوات من المحاولات، وتضعك مباشرة على الطريق الصحيح لتكون مصمم محترف.
                     </p>
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-3">
                     {features.map((feature, index) => (
-                        <Card key={index} className="border-none shadow-none bg-transparent">
-                            <CardContent className={`p-8 rounded-3xl ${feature.bg} flex flex-col items-center text-center h-full transition-transform hover:-translate-y-1 duration-300`}>
-                                <div className="mb-6 bg-background rounded-full p-4 shadow-sm">
-                                    {feature.icon}
+                        <Card key={index} className="group border-none shadow-none bg-transparent">
+                            <CardContent className="p-8 rounded-[2rem] bg-gray-50/80 hover:bg-white border-2 border-transparent hover:border-primary/10 hover:shadow-2xl hover:shadow-primary/5 flex flex-col items-center text-center h-full transition-all duration-300">
+                                <div className="mb-6 bg-white p-5 rounded-2xl shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                    <feature.icon className="w-8 h-8 text-primary" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed">
+                                <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
+                                <p className="text-muted-foreground leading-relaxed text-base">
                                     {feature.description}
                                 </p>
                             </CardContent>

@@ -39,15 +39,15 @@ const upcomingMeetups = [
 
 export default function MeetupsPage() {
     return (
-        <div className="flex flex-col min-h-screen py-12 container">
+        <div className="flex flex-col min-h-screen py-12 container mx-auto">
             <h1 className="text-4xl font-bold mb-8 text-center">لقاءات مجتمع يُسر</h1>
 
             {/* Upcoming Section */}
             <div className="mb-16">
                 <h2 className="text-2xl font-bold mb-6 text-center text-primary">اللقاءات القادمة</h2>
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="flex flex-wrap justify-center gap-6">
                     {upcomingMeetups.map((meetup) => (
-                        <Card key={meetup.id} className="hover:shadow-md transition-shadow">
+                        <Card key={meetup.id} className="w-full max-w-sm hover:shadow-md transition-shadow">
                             <CardHeader>
                                 <CardTitle>{meetup.title}</CardTitle>
                                 <div className="flex items-center gap-4 text-sm text-muted-foreground mt-2">
@@ -77,9 +77,9 @@ export default function MeetupsPage() {
             {/* Previous Section */}
             <div>
                 <h2 className="text-2xl font-bold mb-6 text-center text-muted-foreground">أرشيف اللقاءات</h2>
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 opacity-80">
+                <div className="flex flex-wrap justify-center gap-6 opacity-80">
                     {previousMeetups.map((meetup) => (
-                        <Card key={meetup.id}>
+                        <Card key={meetup.id} className="w-full max-w-sm">
                             <CardHeader>
                                 <CardTitle>{meetup.title}</CardTitle>
                                 <div className="flex items-center gap-4 text-sm text-muted-foreground mt-2">

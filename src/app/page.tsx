@@ -1,7 +1,7 @@
 import { Vision } from "@/components/home/Vision";
 import { FAQ } from "@/components/home/FAQ";
 import { Features } from "@/components/home/Features";
-import { FeaturedMeetups } from "@/components/home/FeaturedMeetups";
+
 import { Hero } from "@/components/home/Hero";
 import { Instructors } from "@/components/home/Instructors";
 // import { Partners } from "@/components/home/Partners"; // Might be redundant or moved
@@ -12,7 +12,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Hero />
       <Features />
-      <FeaturedMeetups />
+
       <Vision />
       <Instructors />
       <FAQ />

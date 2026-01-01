@@ -8,14 +8,19 @@ export function Instructor() {
         <section className="py-20 bg-background">
             <div className="container flex flex-col md:flex-row items-center gap-12">
                 <div className="relative w-full md:w-1/2 aspect-4/5 max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
-                    {/* Placeholder for Amir Yousry Image */}
-                    <div className="absolute inset-0 bg-muted flex items-center justify-center text-muted-foreground">
-                        <span className="text-xl font-bold">[Amir Yousry Photo]</span>
+                    <div className="absolute inset-0 bg-muted">
+                        <Image
+                            src="/Yusr/assets/ai.jpg"
+                            alt="أمير يسري"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                     </div>
                 </div>
 
                 <div className="w-full md:w-1/2 space-y-6">
-                    <Badge variant="secondary" className="text-primary px-4 py-1 text-sm">المدرب الرئيسي</Badge>
+                    <Badge variant="secondary" className="text-white px-4 py-1 text-sm">المدرب الرئيسي</Badge>
                     <h2 className="text-4xl font-bold tracking-tight">أمير يسري</h2>
                     <h3 className="text-xl text-primary font-medium">مؤسس يُسر & UX Consultant</h3>
 
