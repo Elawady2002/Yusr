@@ -14,7 +14,7 @@ const partners = [
 export function Partners() {
     return (
         <section className="py-12 bg-muted/30 border-y">
-            <div className="container text-center">
+            <div className="container-responsive text-center">
                 <p className="text-sm font-semibold text-muted-foreground mb-8">
                     شركاء النجاح والشركات التي تدربت معنا
                 </p>

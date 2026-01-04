@@ -8,8 +8,8 @@ import { PlayCircle, Users } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="relative overflow-hidden bg-background py-12 md:py-20 lg:py-28">
-            <div className="container max-w-6xl mx-auto relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <section className="relative overflow-hidden bg-background py-16 md:py-24 lg:py-32">
+            <div className="container-responsive relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 {/* Right Content (Text) */}
                 <motion.div
                     initial={{ opacity: 0, x: 20 }}
@@ -51,21 +51,21 @@ export function Hero() {
                         </div>
                     </motion.div>
 
-                    <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-[1.2]">
+                    <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-tight pt-4">
                         بدل ما تتعلم كتير...
                         <br />
-                        <span className="text-primary px-2">اتعلم بيُسر</span>
+                        <span className="text-primary px-2 inline-block">اتعلم بيُسر</span>
                     </h1>
 
-                    <p className="text-lg text-muted-foreground md:text-2xl max-w-2xl leading-relaxed">
+                    <p className="text-base text-muted-foreground md:text-xl max-w-2xl leading-relaxed">
                         تعلم منهجية تبسيط التعقيد من خلال ورش عمل عملية، ومشاريع حقيقية تأخذ بيدك من الأساسيات إلى الاحتراف.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-4">
-                        <Button size="lg" className="text-lg font-bold px-10 h-14 rounded-full shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all" asChild>
+                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-6">
+                        <Button size="lg" className="w-full sm:w-auto text-lg font-bold py-6 px-8 h-14 rounded-full shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all" asChild>
                             <Link href="/about">من نحن</Link>
                         </Button>
-                        <Button size="lg" variant="outline" className="text-lg px-8 h-14 rounded-full border-2 hover:bg-muted/50 hover:text-primary flex items-center gap-3" asChild>
+                        <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg py-6 px-8 h-14 rounded-full border-2 hover:bg-muted/50 hover:text-primary flex items-center justify-center gap-3" asChild>
                             <Link href="https://whatsapp.com/channel/0029VajBHqo8qIzyWzK6S938" target="_blank">
                                 <Users className="w-6 h-6" />
                                 <span className="font-bold">زيارة المجتمع</span>
@@ -94,7 +94,7 @@ export function Hero() {
                         </div>
 
                         {/* Floating Card */}
-                        <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl border border-white/50 p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:w-auto sm:translate-x-0 sm:left-6 sm:right-auto sm:max-w-md bg-white/90 backdrop-blur-xl border border-white/50 p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
                             <div className="flex items-center gap-5">
                                 <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                                     <PlayCircle className="w-7 h-7 fill-current" />

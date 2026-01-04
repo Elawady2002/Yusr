@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export function Vision() {
     return (
-        <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-            <div className="container max-w-6xl mx-auto px-4 md:px-6 relative z-10 text-center">
+        <section className="py-16 md:py-24 bg-primary text-primary-foreground relative overflow-hidden">
+            <div className="container-responsive relative z-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -13,8 +13,8 @@ export function Vision() {
                     transition={{ duration: 0.6 }}
                     className="max-w-4xl mx-auto"
                 >
-                    <h2 className="text-3xl font-bold sm:text-4xl mb-6">رؤيتنا</h2>
-                    <p className="text-xl md:text-2xl leading-relaxed text-primary-foreground/90">
+                    <h2 className="text-2xl font-bold sm:text-4xl mb-4 md:mb-6">رؤيتنا</h2>
+                    <p className="text-lg md:text-2xl leading-relaxed text-primary-foreground/90">
                         "نؤمن في يُسر بأن التصميم العظيم هو الذي يختفي من أمام المستخدم، تاركاً له التجربة النقية.
                         وهدفنا هو تمكين المصممين العرب من امتلاك أدوات التفكير المنطقي والبحث العلمي،
                         للمنافسة بثقة في السوق العالمي وبناء منتجات رقمية تحترم عقل الإنسان."

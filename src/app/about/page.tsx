@@ -6,10 +6,10 @@ import { Instructor } from "@/components/bootcamp/Instructor";
 
 export default function AboutPage() {
     return (
-        <div className="container mx-auto py-20 min-h-screen">
+        <div className="container-responsive mx-auto py-20 min-h-screen">
             <div className="max-w-3xl mx-auto text-center mb-16">
-                <h1 className="text-4xl font-extrabold mb-6">أكثر من مجرد منصة تعليمية</h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <h1 className="text-3xl sm:text-4xl font-extrabold mb-6">أكثر من مجرد منصة تعليمية</h1>
+                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                     انطلقت "يُسر" من إيمان عميق بأن التصميم ليس مجرد "شكل جميل"، بل هو أسلوب حياة وطريقة تفكير لحل المشكلات.
                     نحن هنا لنبسط لك المفاهيم المعقدة، ونساعدك على إتقان تصميم تجربة المستخدم (UX) بعيداً عن الحشو النظري.
                 </p>
@@ -25,12 +25,12 @@ export default function AboutPage() {
                     />
                 </div>
                 <div className="space-y-6">
-                    <h2 className="text-3xl font-bold">لماذا نحن هنا؟</h2>
-                    <p className="text-lg text-muted-foreground">
+                    <h2 className="text-2xl sm:text-3xl font-bold">لماذا نحن هنا؟</h2>
+                    <p className="text-base sm:text-lg text-muted-foreground">
                         في عالم رقمي مزدحم، نؤمن بقوة <strong>"السهولة الممتنعة"</strong>.
                         مهمتنا هي تمليكك الأدوات والمنهجيات التي تجعل منك مصمماً واثقاً، قادراً على اتخاذ قرارات مبنية على البحث والبيانات، وليس مجرد منفذ للتعليمات.
                     </p>
-                    <ul className="list-disc list-inside space-y-3 text-lg text-foreground/80 marker:text-primary">
+                    <ul className="list-disc list-inside space-y-3 text-base sm:text-lg text-foreground/80 marker:text-primary">
                         <li>نركز على القيمة الحقيقية وليس المظاهر.</li>
                         <li>نقدر وقتك، لذلك محتوانا مكثف ومباشر.</li>
                         <li>نبني مجتمعاً عربياً قوياً للمصممين المحترفين.</li>

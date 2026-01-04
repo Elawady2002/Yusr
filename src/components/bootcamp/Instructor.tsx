@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 export function Instructor() {
     return (
         <section className="py-20 bg-background">
-            <div className="container flex flex-col md:flex-row items-center gap-12">
+            <div className="container-responsive flex flex-col md:flex-row items-center gap-12">
                 <div className="relative w-full md:w-1/2 aspect-4/5 max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
                     <div className="absolute inset-0 bg-muted">
                         <Image

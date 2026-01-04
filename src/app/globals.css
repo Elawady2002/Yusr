@@ -147,9 +147,16 @@
     @apply border-border outline-ring/50;
   }
 
-  html,
+  html {
+    background-color: #0f172a; /* Match footer color for seamless overscroll */
+  }
+
   body {
     @apply bg-background text-foreground;
     cursor: url('/Yusr/assets/quater.svg'), auto !important;
   }
+}
+
+@utility container-responsive {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
 }
