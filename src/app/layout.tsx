@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
 };
 
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/common/Navbar";
+import { Footer } from "@/components/common/Footer";
 
 // ... existing imports
 

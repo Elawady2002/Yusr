@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { PlayCircle, Users } from "lucide-react";
+import { HERO_DATA } from "@/data/home";
 
 export function Hero() {
     return (
@@ -23,12 +24,7 @@ export function Hero() {
                         className="inline-flex items-center gap-4 rounded-full border border-gray-100 bg-white px-8 py-2.5 shadow-xl shadow-gray-200/50 cursor-default mb-6 overflow-hidden w-fit"
                     >
                         <div className="flex -space-x-4 rtl:space-x-reverse">
-                            {[
-                                "/Yusr/assets/بروفايل.jpg",
-                                "/Yusr/assets/ai.jpg",
-                                "/Yusr/assets/amr.png",
-                                "/Yusr/assets/IMG_0052.jpg"
-                            ].map((src, i) => (
+                            {HERO_DATA.socialProof.images.map((src, i) => (
                                 <div key={i} className="w-10 h-10 rounded-full border-[3px] border-white bg-gray-100 relative overflow-hidden ring-1 ring-gray-100">
                                     <Image
                                         src={src}
@@ -45,30 +41,30 @@ export function Hero() {
                                 <div className="flex text-yellow-500 text-sm">
                                     {[1, 2, 3, 4, 5].map(s => <span key={s} className="drop-shadow-sm">★</span>)}
                                 </div>
-                                <span className="text-lg leading-none pt-1">500+</span>
+                                <span className="text-lg leading-none pt-1">{HERO_DATA.socialProof.count}</span>
                             </div>
-                            <span className="text-xs font-semibold text-gray-500 leading-tight">مصمم انضموا إلينا</span>
+                            <span className="text-xs font-semibold text-gray-500 leading-tight">{HERO_DATA.socialProof.text}</span>
                         </div>
                     </motion.div>
 
                     <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-tight pt-4">
-                        بدل ما تتعلم كتير...
+                        {HERO_DATA.title.prefix}
                         <br />
-                        <span className="text-primary px-2 inline-block">اتعلم بيُسر</span>
+                        <span className="text-primary px-2 inline-block">{HERO_DATA.title.highlight}</span>
                     </h1>
 
                     <p className="text-base text-muted-foreground md:text-xl max-w-2xl leading-relaxed">
-                        تعلم منهجية تبسيط التعقيد من خلال ورش عمل عملية، ومشاريع حقيقية تأخذ بيدك من الأساسيات إلى الاحتراف.
+                        {HERO_DATA.description}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-6">
                         <Button size="lg" className="w-full sm:w-auto text-lg font-bold py-6 px-8 h-14 rounded-full shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all" asChild>
-                            <Link href="/about">من نحن</Link>
+                            <Link href={HERO_DATA.cta.primary.href}>{HERO_DATA.cta.primary.label}</Link>
                         </Button>
                         <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg py-6 px-8 h-14 rounded-full border-2 hover:bg-muted/50 hover:text-primary flex items-center justify-center gap-3" asChild>
-                            <Link href="https://whatsapp.com/channel/0029VajBHqo8qIzyWzK6S938" target="_blank">
+                            <Link href={HERO_DATA.cta.secondary.href} target="_blank">
                                 <Users className="w-6 h-6" />
-                                <span className="font-bold">زيارة المجتمع</span>
+                                <span className="font-bold">{HERO_DATA.cta.secondary.label}</span>
                             </Link>
                         </Button>
                     </div>
@@ -86,9 +82,10 @@ export function Hero() {
                         <div className="relative w-full h-full px-4">
                             <Image
                                 src="/Yusr/assets/photoـamir.jpg"
-                                alt="تدريب عملي في بوتكامب تجربة المستخدم"
+                                alt={HERO_DATA.description} // Better a11y: using description
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 priority
                             />
                         </div>
@@ -100,8 +97,8 @@ export function Hero() {
                                     <PlayCircle className="w-7 h-7 fill-current" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-lg text-foreground mb-0.5">ورش عمل تفاعلية</p>
-                                    <p className="text-sm font-medium text-muted-foreground">أكثر من 20 ساعة تطبيق عملي</p>
+                                    <p className="font-bold text-lg text-foreground mb-0.5">{HERO_DATA.floatingCard.title}</p>
+                                    <p className="text-sm font-medium text-muted-foreground">{HERO_DATA.floatingCard.subtitle}</p>
                                 </div>
                             </div>
                             <div className="w-12 h-12 relative shrink-0">

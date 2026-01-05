@@ -4,50 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const instructors = [
-    {
-        name: "أمير يسري",
-        role: "Founder of Yusr",
-        image: "/Yusr/assets/ai.jpg",
-        company: "Yusr",
-        linkedin: "https://www.linkedin.com/in/amir-yousry-2bb306283/",
-    },
-    {
-        name: "زياد طوسن",
-        role: "Product Designer & Mentor",
-        image: "/Yusr/assets/بروفايل.jpg",
-        company: "Microsoft",
-        linkedin: "https://www.linkedin.com/in/zyadtoson/",
-    },
-    {
-        name: "عمرو خالد",
-        role: "UI/UX Designer & Mentor",
-        image: "/Yusr/assets/amr.png",
-        company: "Talabat",
-        linkedin: "https://www.linkedin.com/in/amr-5aled/",
-    },
-    {
-        name: "عبدالله العوضي",
-        role: "Product Designer",
-        image: "/Yusr/assets/IMG_0052.jpg",
-        company: "B2",
-        linkedin: "https://www.linkedin.com/in/abdullah-elawady-019129330/",
-    },
-    {
-        name: "كريم يسري",
-        role: "Flutter Developer",
-        image: "/Yusr/assets/kareem_yousry.jpeg",
-        company: "Yusr",
-        linkedin: "https://www.linkedin.com/in/kareem-yousry/",
-    },
-    {
-        name: "سارة طارق",
-        role: "Product Designer",
-        image: "/Yusr/assets/1738272331493.jpeg",
-        company: "Booking.com",
-        linkedin: "https://www.linkedin.com/in/saratarek-/",
-    },
-];
+import { INSTRUCTORS_DATA } from "@/data/home";
+
+const instructors = INSTRUCTORS_DATA;
 
 const container = {
     hidden: { opacity: 0 },

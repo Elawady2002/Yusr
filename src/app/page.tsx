@@ -1,11 +1,11 @@
-import { Vision } from "@/components/home/Vision";
-import { FAQ } from "@/components/home/FAQ";
-import { Features } from "@/components/home/Features";
+import { Vision } from "@/components/features/home/Vision";
+import { FAQ } from "@/components/features/home/FAQ";
+import { Features } from "@/components/features/home/Features";
 
-import { Hero } from "@/components/home/Hero";
-import { Instructors } from "@/components/home/Instructors";
-// import { Partners } from "@/components/home/Partners"; // Might be redundant or moved
-import { ContactForm } from "@/components/home/ContactForm";
+import { Hero } from "@/components/features/home/Hero";
+import { Instructors } from "@/components/features/home/Instructors";
+// import { Partners } from "@/components/features/home/Partners"; // Might be redundant or moved
+import { ContactForm } from "@/components/features/home/ContactForm";
 
 export default function Home() {
   return (
