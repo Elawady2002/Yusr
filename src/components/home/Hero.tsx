@@ -83,7 +83,7 @@ export function Hero() {
                 >
                     <div className="relative aspect-4/3 rounded-[2.5rem] overflow-hidden bg-transparent shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-gray-100">
                         {/* Hero Image */}
-                        <div className="relative w-full h-full">
+                        <div className="relative w-full h-full px-4">
                             <Image
                                 src="/Yusr/assets/photoـamir.jpg"
                                 alt="تدريب عملي في بوتكامب تجربة المستخدم"
@@ -94,7 +94,7 @@ export function Hero() {
                         </div>
 
                         {/* Floating Card */}
-                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:w-auto sm:translate-x-0 sm:left-6 sm:right-auto sm:max-w-md bg-white/90 backdrop-blur-xl border border-white/50 p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-4rem)] bg-white/90 backdrop-blur-xl border border-white/50 p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
                             <div className="flex items-center gap-5">
                                 <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                                     <PlayCircle className="w-7 h-7 fill-current" />
