@@ -8,10 +8,10 @@ export const HERO_DATA = {
         text: "مصمم انضموا إلينا",
         count: "500+",
         images: [
-            "/Yusr/assets/بروفايل.jpg",
-            "/Yusr/assets/ai.jpg",
-            "/Yusr/assets/amr.png",
-            "/Yusr/assets/IMG_0052.jpg"
+            "/Yusr/assets/بروفايل.webp",
+            "/Yusr/assets/ai.webp",
+            "/Yusr/assets/amr.webp",
+            "/Yusr/assets/IMG_0052.webp"
         ]
     },
     cta: {
@@ -34,42 +34,42 @@ export const INSTRUCTORS_DATA = [
     {
         name: "أمير يسري",
         role: "Founder of Yusr",
-        image: "/Yusr/assets/ai.jpg",
+        image: "/Yusr/assets/ai.webp",
         company: "Yusr",
         linkedin: "https://www.linkedin.com/in/amir-yousry-2bb306283/",
     },
     {
         name: "زياد طوسن",
         role: "Product Designer & Mentor",
-        image: "/Yusr/assets/بروفايل.jpg",
+        image: "/Yusr/assets/بروفايل.webp",
         company: "Microsoft",
         linkedin: "https://www.linkedin.com/in/zyadtoson/",
     },
     {
         name: "عمرو خالد",
         role: "UI/UX Designer & Mentor",
-        image: "/Yusr/assets/amr.png",
+        image: "/Yusr/assets/amr.webp",
         company: "Talabat",
         linkedin: "https://www.linkedin.com/in/amr-5aled/",
     },
     {
         name: "عبدالله العوضي",
         role: "Product Designer",
-        image: "/Yusr/assets/IMG_0052.jpg",
+        image: "/Yusr/assets/IMG_0052.webp",
         company: "B2",
         linkedin: "https://www.linkedin.com/in/abdullah-elawady-019129330/",
     },
     {
         name: "كريم يسري",
         role: "Flutter Developer",
-        image: "/Yusr/assets/kareem_yousry.jpeg",
+        image: "/Yusr/assets/kareem_yousry.webp",
         company: "Yusr",
         linkedin: "https://www.linkedin.com/in/kareem-yousry/",
     },
     {
         name: "سارة طارق",
         role: "Product Designer",
-        image: "/Yusr/assets/1738272331493.jpeg",
+        image: "/Yusr/assets/1738272331493.webp",
         company: "Booking.com",
         linkedin: "https://www.linkedin.com/in/saratarek-/",
     },

@@ -81,7 +81,7 @@ export function Hero() {
                         {/* Hero Image */}
                         <div className="relative w-full h-full px-4">
                             <Image
-                                src="/Yusr/assets/photoـamir.jpg"
+                                src="/Yusr/assets/photoـamir.webp"
                                 alt={HERO_DATA.description} // Better a11y: using description
                                 fill
                                 className="object-cover"
