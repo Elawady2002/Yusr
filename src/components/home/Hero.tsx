@@ -20,14 +20,14 @@ export function Hero() {
                     {/* Compact Social Proof Badge */}
                     <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="inline-flex items-center gap-4 rounded-full border border-gray-100 bg-white px-3 py-2.5 shadow-xl shadow-gray-200/50 cursor-default mb-6"
+                        className="inline-flex items-center gap-4 rounded-full border border-gray-100 bg-white px-8 py-2.5 shadow-xl shadow-gray-200/50 cursor-default mb-6 overflow-hidden w-fit"
                     >
                         <div className="flex -space-x-4 rtl:space-x-reverse">
                             {[
-                                "https://i.pravatar.cc/120?img=32",
-                                "https://i.pravatar.cc/120?img=47",
-                                "https://i.pravatar.cc/120?img=12",
-                                "https://i.pravatar.cc/120?img=5"
+                                "/Yusr/assets/بروفايل.jpg",
+                                "/Yusr/assets/ai.jpg",
+                                "/Yusr/assets/amr.png",
+                                "/Yusr/assets/IMG_0052.jpg"
                             ].map((src, i) => (
                                 <div key={i} className="w-10 h-10 rounded-full border-[3px] border-white bg-gray-100 relative overflow-hidden ring-1 ring-gray-100">
                                     <Image
@@ -40,7 +40,7 @@ export function Hero() {
                                 </div>
                             ))}
                         </div>
-                        <div className="flex flex-col items-start pl-2">
+                        <div className="flex flex-col items-start">
                             <div className="flex items-center gap-1.5 font-bold text-gray-900">
                                 <div className="flex text-yellow-500 text-sm">
                                     {[1, 2, 3, 4, 5].map(s => <span key={s} className="drop-shadow-sm">★</span>)}
