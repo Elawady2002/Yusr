@@ -4,6 +4,7 @@ import { Features } from "@/components/features/home/Features";
 import { Hero } from "@/components/features/home/Hero";
 import { Approach } from "@/components/features/home/Approach";
 import { Founder } from "@/components/features/home/Founder";
+import { Instructors } from "@/components/features/home/Instructors";
 import { CommunityCTA } from "@/components/features/home/CommunityCTA";
 import { ContactForm } from "@/components/features/home/ContactForm";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Features />
       <Approach />
       <Founder />
+      <Instructors />
       <Vision />
       <CommunityCTA />
       <FAQ />

@@ -47,7 +47,7 @@ export function Founder() {
                                 {FOUNDER_DATA.title}
                             </p>
                         </div>
-                        <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                        <p className="text-base md:text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
                             {FOUNDER_DATA.description}
                         </p>
                     </motion.div>
