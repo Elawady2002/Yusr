@@ -12,13 +12,20 @@ export default function AboutPage() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Hero Section */}
-            <section className="py-16 md:py-24 bg-background">
-                <div className="container-responsive">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6">
+            <section className="relative py-20 md:py-32 bg-gradient-to-b from-primary/5 via-background to-background overflow-hidden">
+                {/* Decorative Elements */}
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10" />
+                <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] -z-10" />
+
+                <div className="container-responsive relative z-10">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
+                            تعرّف علينا
+                        </span>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
                             من نحن – يُسر
                         </h1>
-                        <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                             يُسر هي أكاديمية تعليمية متخصصة في تقديم Bootcamps في مجال UI/UX، هدفها تبسيط التعلّم وتحويله لتجربة إنسانية، واضحة، وقابلة للتطبيق.
                         </p>
                     </div>
