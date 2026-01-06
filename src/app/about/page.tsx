@@ -20,16 +20,6 @@ export default function AboutPage() {
 
                 <div className="container-responsive relative z-10">
                     <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                        {/* Right Content */}
-                        <div className="text-start space-y-6">
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-                                من نحن – يُسر
-                            </h1>
-                            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                                يُسر هي أكاديمية تعليمية متخصصة في تقديم Bootcamps في مجال UI/UX، هدفها تبسيط التعلّم وتحويله لتجربة إنسانية، واضحة، وقابلة للتطبيق.
-                            </p>
-                        </div>
-
                         {/* Hero Image */}
                         <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/20">
                             <Image
@@ -40,6 +30,16 @@ export default function AboutPage() {
                                 sizes="(max-width: 768px) 100vw, 800px"
                                 priority
                             />
+                        </div>
+
+                        {/* Content */}
+                        <div className="text-start space-y-6">
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+                                من نحن – يُسر
+                            </h1>
+                            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                                يُسر هي أكاديمية تعليمية متخصصة في تقديم Bootcamps في مجال UI/UX، هدفها تبسيط التعلّم وتحويله لتجربة إنسانية، واضحة، وقابلة للتطبيق.
+                            </p>
                         </div>
                     </div>
                 </div>
