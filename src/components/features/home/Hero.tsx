@@ -50,7 +50,7 @@ export function Hero() {
                     <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-tight pt-4">
                         {HERO_DATA.title.prefix}
                         <br />
-                        <span className="text-primary px-2 inline-block">{HERO_DATA.title.highlight}</span>
+                        {HERO_DATA.title.highlight}
                     </h1>
 
                     <p className="text-base text-muted-foreground md:text-xl max-w-2xl leading-relaxed">
