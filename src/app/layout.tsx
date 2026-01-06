@@ -17,16 +17,27 @@ const pingAR = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Yusr | يُسر - تعلم تصميم تجربة المستخدم (UX/UI)",
+    default: "يُسر – Yusr Bootcamp Academy | من اليُسر تبدأ التجربة",
     template: "%s | يُسر"
   },
-  description: "انضم إلى أقوى مجتمع لتعلم تصميم تجربة المستخدم (UX) وواجهات المستخدم (UI) في العالم العربي. منهجية عملية، وتوجيه مهني، ومشاريع حقيقية.",
-  keywords: ["UX Design", "UI Design", "User Experience", "تجربة المستخدم", "تصميم واجهات", "بوتكامب", "تعليم تصميم", "يُسر", "Yusr"],
+  description: "أكاديمية يُسر تقدّم Bootcamps متخصصة في UI/UX لتعلّم تجربة المستخدم من الفهم للتطبيق العملي.",
+  keywords: [
+    "UX Bootcamp",
+    "UI UX Academy",
+    "تعلم UX بالعربي",
+    "UX Design Bootcamp",
+    "أكاديمية UX",
+    "تعلم تجربة المستخدم",
+    "UI UX للمبتدئين",
+    "تأهيل UX لسوق العمل",
+    "يُسر",
+    "Yusr"
+  ],
   openGraph: {
-    title: "Yusr | يُسر - احترف تصميم تجربة المستخدم",
-    description: "رحلتك لتصبح مصمم تجربة مستخدم عالمي تبدأ هنا. تعلم بمنهجية التبسيط.",
-    url: "https://yusr.design", // Placeholder URL
-    siteName: "Yusr | يُسر",
+    title: "يُسر – Yusr Bootcamp Academy | بدل ما تتعلم كتير… اتعلّم يُسر",
+    description: "أكاديمية يُسر تقدّم Bootcamps متخصصة في UI/UX لتعلّم تجربة المستخدم من الفهم للتطبيق العملي.",
+    url: "https://yusr.design",
+    siteName: "يُسر | Yusr",
     locale: "ar_EG",
     type: "website",
   },
