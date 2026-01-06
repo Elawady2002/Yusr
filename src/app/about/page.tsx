@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import { Target, Eye, CheckCircle2, Users } from "lucide-react";
 
@@ -25,9 +26,21 @@ export default function AboutPage() {
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
                             من نحن – يُسر
                         </h1>
-                        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
                             يُسر هي أكاديمية تعليمية متخصصة في تقديم Bootcamps في مجال UI/UX، هدفها تبسيط التعلّم وتحويله لتجربة إنسانية، واضحة، وقابلة للتطبيق.
                         </p>
+
+                        {/* Hero Image */}
+                        <div className="relative w-full max-w-3xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/20">
+                            <Image
+                                src="/assets/Post_Cover.png"
+                                alt="من اليسر تبدأ التجربة"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 800px"
+                                priority
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
