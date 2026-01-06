@@ -8,7 +8,7 @@ import { COMMUNITY_CTA_DATA } from "@/data/home";
 
 export function CommunityCTA() {
     return (
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-background text-foreground relative overflow-hidden">
             <div className="container-responsive relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -20,13 +20,12 @@ export function CommunityCTA() {
                     <h2 className="text-2xl font-bold sm:text-4xl mb-4 md:mb-6">
                         {COMMUNITY_CTA_DATA.title}
                     </h2>
-                    <p className="text-lg md:text-xl leading-relaxed text-primary-foreground/90 mb-8">
+                    <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-8">
                         {COMMUNITY_CTA_DATA.description}
                     </p>
                     <Button
                         size="lg"
-                        variant="secondary"
-                        className="text-lg font-bold py-6 px-8 h-14 rounded-full shadow-xl hover:shadow-secondary/20 hover:-translate-y-0.5 transition-all gap-3"
+                        className="text-lg font-bold py-6 px-8 h-14 rounded-full shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all gap-3"
                         asChild
                     >
                         <Link href={COMMUNITY_CTA_DATA.cta.href} target="_blank">
@@ -37,8 +36,9 @@ export function CommunityCTA() {
                 </motion.div>
             </div>
 
-            {/* Pattern Overlay */}
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] bg-size-[20px_20px] mix-blend-overlay pointer-events-none" />
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10" />
+            <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] -z-10" />
         </section>
     );
 }
