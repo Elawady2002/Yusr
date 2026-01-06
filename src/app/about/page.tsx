@@ -12,7 +12,7 @@ export default function AboutPage() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Hero Section */}
-            <section className="relative py-20 md:py-32 bg-gradient-to-b from-primary/5 via-background to-background overflow-hidden">
+            <section className="relative py-20 md:py-32 bg-linear-to-b from-primary/5 via-background to-background overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10" />
                 <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] -z-10" />
