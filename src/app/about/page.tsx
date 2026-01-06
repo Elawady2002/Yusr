@@ -33,7 +33,7 @@ export default function AboutPage() {
                         {/* Hero Image */}
                         <div className="relative w-full max-w-3xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/20">
                             <Image
-                                src="/assets/Post_Cover.png"
+                                src="/Yusr/assets/Post_Cover.png"
                                 alt="من اليسر تبدأ التجربة"
                                 fill
                                 className="object-cover"
