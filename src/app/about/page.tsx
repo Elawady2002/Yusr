@@ -19,19 +19,19 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] -z-10" />
 
                 <div className="container-responsive relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
-                            تعرّف علينا
-                        </span>
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
-                            من نحن – يُسر
-                        </h1>
-                        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
-                            يُسر هي أكاديمية تعليمية متخصصة في تقديم Bootcamps في مجال UI/UX، هدفها تبسيط التعلّم وتحويله لتجربة إنسانية، واضحة، وقابلة للتطبيق.
-                        </p>
+                    <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                        {/* Right Content */}
+                        <div className="text-start space-y-6">
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+                                من نحن – يُسر
+                            </h1>
+                            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                                يُسر هي أكاديمية تعليمية متخصصة في تقديم Bootcamps في مجال UI/UX، هدفها تبسيط التعلّم وتحويله لتجربة إنسانية، واضحة، وقابلة للتطبيق.
+                            </p>
+                        </div>
 
                         {/* Hero Image */}
-                        <div className="relative w-full max-w-3xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/20">
+                        <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/20">
                             <Image
                                 src="/Yusr/assets/Post_Cover.png"
                                 alt="من اليسر تبدأ التجربة"
