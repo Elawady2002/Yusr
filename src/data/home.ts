@@ -8,10 +8,10 @@ export const HERO_DATA = {
         text: "متعلّم خاضوا تجربة يُسر التعليمية",
         count: "+500",
         images: [
-            "/Yusr/assets/بروفايل.webp",
-            "/Yusr/assets/ai.webp",
-            "/Yusr/assets/amr.webp",
-            "/Yusr/assets/IMG_0052.webp"
+            "/assets/بروفايل.webp",
+            "/assets/ai.webp",
+            "/assets/amr.webp",
+            "/assets/IMG_0052.webp"
         ]
     },
     cta: {
@@ -58,7 +58,7 @@ export const FOUNDER_DATA = {
     name: "أمير يسري",
     title: "Founder of Yusr",
     description: "أنا أمير يسري، مصمم تجربة مستخدم ومدرب UI/UX.\nبشتغل على تحويل الأفكار المعقدة لتجارب بسيطة، مفهومة، وسهلة الاستخدام.\nخبرتي جاية من شغل فعلي على منتجات حقيقية، وتعامل مباشر مع طلاب ومصممين في مراحل مختلفة من رحلتهم.\n\nمهتم بالتعليم التطبيقي أكتر من الكلام النظري،\nوبؤمن إن التصميم الصح بيبدأ من فهم الإنسان قبل أي أداة.",
-    image: "/Yusr/assets/ai.webp"
+    image: "/assets/ai.webp"
 };
 
 export const COMMUNITY_CTA_DATA = {
@@ -74,42 +74,42 @@ export const INSTRUCTORS_DATA = [
     {
         name: "أمير يسري",
         role: "Founder of Yusr",
-        image: "/Yusr/assets/ai.webp",
+        image: "/assets/ai.webp",
         company: "Yusr",
         linkedin: "https://www.linkedin.com/in/amir-yousry-2bb306283/",
     },
     {
         name: "زياد طوسن",
         role: "Product Designer & Mentor",
-        image: "/Yusr/assets/بروفايل.webp",
+        image: "/assets/بروفايل.webp",
         company: "Microsoft",
         linkedin: "https://www.linkedin.com/in/zyadtoson/",
     },
     {
         name: "عمرو خالد",
         role: "UI/UX Designer & Mentor",
-        image: "/Yusr/assets/amr.webp",
+        image: "/assets/amr.webp",
         company: "Talabat",
         linkedin: "https://www.linkedin.com/in/amr-5aled/",
     },
     {
         name: "عبدالله العوضي",
         role: "Product Designer",
-        image: "/Yusr/assets/IMG_0052.webp",
+        image: "/assets/IMG_0052.webp",
         company: "B2",
         linkedin: "https://www.linkedin.com/in/abdullah-elawady-019129330/",
     },
     {
         name: "كريم يسري",
         role: "Flutter Developer",
-        image: "/Yusr/assets/kareem_yousry.webp",
+        image: "/assets/kareem_yousry.webp",
         company: "Yusr",
         linkedin: "https://www.linkedin.com/in/kareem-yousry/",
     },
     {
         name: "سارة طارق",
         role: "Product Designer",
-        image: "/Yusr/assets/1738272331493.webp",
+        image: "/assets/1738272331493.webp",
         company: "Booking.com",
         linkedin: "https://www.linkedin.com/in/saratarek-/",
     },

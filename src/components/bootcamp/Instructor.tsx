@@ -10,7 +10,7 @@ export function Instructor() {
                 <div className="relative w-full md:w-1/2 aspect-4/5 max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
                     <div className="absolute inset-0 bg-muted">
                         <Image
-                            src="/Yusr/assets/ai.jpg"
+                            src="/assets/ai.jpg"
                             alt="أمير يسري"
                             fill
                             className="object-cover"

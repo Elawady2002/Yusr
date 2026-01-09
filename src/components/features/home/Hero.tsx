@@ -12,15 +12,11 @@ export function Hero() {
         <section className="relative overflow-hidden bg-background py-16 md:py-24 lg:py-32">
             <div className="container-responsive relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 {/* Right Content (Text) */}
-                <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
+                <div
                     className="flex flex-col items-start text-start space-y-8"
                 >
                     {/* Compact Social Proof Badge */}
-                    <motion.div
-                        whileHover={{ scale: 1.02 }}
+                    <div
                         className="inline-flex items-center gap-4 rounded-full border border-gray-100 bg-white px-8 py-2.5 shadow-xl shadow-gray-200/50 cursor-default mb-6 overflow-hidden w-fit"
                     >
                         <div className="flex -space-x-4 rtl:space-x-reverse">
@@ -45,7 +41,7 @@ export function Hero() {
                             </div>
                             <span className="text-xs font-semibold text-gray-500 leading-tight">{HERO_DATA.socialProof.text}</span>
                         </div>
-                    </motion.div>
+                    </div>
 
                     <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-tight pt-4">
                         {HERO_DATA.title.prefix}
@@ -68,20 +64,17 @@ export function Hero() {
                             </Link>
                         </Button>
                     </div>
-                </motion.div>
+                </div>
 
                 {/* Left Content (Image/Visual) */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                <div
                     className="relative mx-auto w-full max-w-[600px] lg:max-w-none"
                 >
                     <div className="relative aspect-4/3 rounded-[2.5rem] overflow-hidden bg-transparent shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-gray-100">
                         {/* Hero Image */}
                         <div className="relative w-full h-full px-4">
                             <Image
-                                src="/Yusr/assets/photoـamir.webp"
+                                src="/assets/photoـamir.webp"
                                 alt={HERO_DATA.description} // Better a11y: using description
                                 fill
                                 className="object-cover"
@@ -90,27 +83,28 @@ export function Hero() {
                             />
                         </div>
 
-                        {/* Floating Card */}
-                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-4rem)] bg-white/90 backdrop-blur-xl border border-white/50 p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
-                            <div className="flex items-center gap-5">
-                                <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                                    <PlayCircle className="w-7 h-7 fill-current" />
-                                </div>
-                                <div>
-                                    <p className="font-bold text-lg text-foreground mb-0.5">{HERO_DATA.floatingCard.title}</p>
-                                    <p className="text-sm font-medium text-muted-foreground">{HERO_DATA.floatingCard.subtitle}</p>
-                                </div>
+                    </div>
+
+                    {/* Floating Card - Repositioned */}
+                    <div className="relative mt-6 w-full md:absolute md:bottom-8 md:left-1/2 md:-translate-x-1/2 md:w-[calc(100%-4rem)] md:mt-0 bg-white/90 backdrop-blur-xl border border-white/50 p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
+                        <div className="flex items-center gap-5">
+                            <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <PlayCircle className="w-7 h-7 fill-current" />
                             </div>
-                            <div className="w-12 h-12 relative shrink-0">
-                                <span className="absolute inset-0 rounded-full border-[3px] border-primary/20 border-t-primary animate-spin-slow"></span>
+                            <div>
+                                <p className="font-bold text-lg text-foreground mb-0.5">{HERO_DATA.floatingCard.title}</p>
+                                <p className="text-sm font-medium text-muted-foreground">{HERO_DATA.floatingCard.subtitle}</p>
                             </div>
+                        </div>
+                        <div className="w-12 h-12 relative shrink-0">
+                            <span className="absolute inset-0 rounded-full border-[3px] border-primary/20 border-t-primary animate-spin-slow"></span>
                         </div>
                     </div>
 
                     {/* Back decoration blobs */}
                     <div className="absolute -top-16 -right-16 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] -z-10 mix-blend-multiply" />
                     <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-primary/10 rounded-full blur-[100px] -z-10 mix-blend-multiply" />
-                </motion.div>
+                </div>
             </div>
         </section>
     );

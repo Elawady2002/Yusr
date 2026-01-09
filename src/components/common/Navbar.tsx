@@ -22,13 +22,13 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+        <header className="fixed top-0 left-0 right-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
             <div className="container-responsive h-20 flex items-center justify-between">
                 <div className="flex items-center gap-12">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2 rtl:space-x-reverse">
                         <Image
-                            src="/Yusr/logo.svg"
+                            src="/logo.svg"
                             alt="Yusr Logo"
                             width={40}
                             height={40}
@@ -68,14 +68,14 @@ export function Navbar() {
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right" className="pr-0">
-                            <div className="flex flex-col gap-6 px-7 mt-8">
+                            <div className="flex flex-col gap-6 px-7 mt-20">
                                 <Link
                                     href="/"
                                     className="flex items-center space-x-2 rtl:space-x-reverse"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     <Image
-                                        src="/Yusr/logo.svg"
+                                        src="/logo.svg"
                                         alt="Yusr Logo"
                                         width={32}
                                         height={32}

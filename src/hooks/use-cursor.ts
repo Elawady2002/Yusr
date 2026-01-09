@@ -17,7 +17,7 @@ export function useCursor(): { activeColor: string | null } {
     useEffect(() => {
         // 1. Initial Setup (Cursor Selection)
         const randomData = CURSOR_DATA[Math.floor(Math.random() * CURSOR_DATA.length)];
-        const cursorUrl = `/Yusr/assets/Cursors/${randomData.file}`;
+        const cursorUrl = `/assets/Cursors/${randomData.file}`;
         setActiveColor(randomData.color);
 
         // 2. Global Custom Cursor Styles

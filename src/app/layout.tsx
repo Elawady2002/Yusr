@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "يُسر – Yusr Bootcamp Academy | بدل ما تتعلم كتير… اتعلّم يُسر",
     description: "أكاديمية يُسر تقدّم Bootcamps متخصصة في UI/UX لتعلّم تجربة المستخدم من الفهم للتطبيق العملي.",
-    url: "https://yusr.design",
+    url: "https://yusr-academy.com",
     siteName: "يُسر | Yusr",
     locale: "ar_EG",
     type: "website",
@@ -62,7 +62,7 @@ export default function RootLayout({
       >
         <RandomCursor />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pt-20">{children}</main>
         <Footer />
       </body>
     </html>
