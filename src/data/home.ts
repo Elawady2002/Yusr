@@ -102,7 +102,7 @@ export const INSTRUCTORS_DATA = [
     {
         name: "كريم يسري",
         role: "Flutter Developer",
-        image: "/assets/kareem_yousry.webp",
+        image: "/assets/ys.jpeg",
         company: "Yusr",
         linkedin: "https://www.linkedin.com/in/kareem-yousry/",
     },
