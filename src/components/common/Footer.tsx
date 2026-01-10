@@ -29,7 +29,7 @@ export function Footer() {
                         <ul className="space-y-4 text-base text-gray-400">
                             <li><Link href="/" className="hover:text-primary transition-colors flex items-center gap-2">الرئيسية</Link></li>
                             <li><Link href="/about" className="hover:text-primary transition-colors flex items-center gap-2">من نحن</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors flex items-center gap-2">اتصل بنا</Link></li>
+
                         </ul>
                     </div>
 
@@ -45,10 +45,7 @@ export function Footer() {
                                 <Mail className="w-5 h-5 text-primary shrink-0" />
                                 <a href="mailto:withamiruiux@gmail.com" className="hover:text-primary transition-colors dir-ltr">withamiruiux@gmail.com</a>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <Phone className="w-5 h-5 text-primary shrink-0" />
-                                <span dir="ltr" className="text-right hover:text-primary transition-colors cursor-pointer">+20 106 914 4823</span>
-                            </li>
+
                         </ul>
                     </div>
 
