@@ -55,11 +55,15 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-6">
                         <Button size="lg" className="w-full sm:w-auto text-lg font-bold py-6 px-8 h-14 rounded-full shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all" asChild>
-                            <Link href={HERO_DATA.cta.primary.href}>{HERO_DATA.cta.primary.label}</Link>
+                            <Link href={HERO_DATA.cta.primary.href}>
+                                <span className="flex items-center gap-2">
+                                    <Users className="w-6 h-6" />
+                                    <span>{HERO_DATA.cta.primary.label}</span>
+                                </span>
+                            </Link>
                         </Button>
                         <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg py-6 px-8 h-14 rounded-full border-2 hover:bg-muted/50 hover:text-primary flex items-center justify-center gap-3" asChild>
                             <Link href={HERO_DATA.cta.secondary.href} target="_blank">
-                                <Users className="w-6 h-6" />
                                 <span className="font-bold">{HERO_DATA.cta.secondary.label}</span>
                             </Link>
                         </Button>

@@ -6,12 +6,12 @@ export const HERO_DATA = {
     description: "أكاديمية تعليمية بتقدّم Bootcamps متخصصة في UI/UX، بنحوّل التعلّم من معلومات مبعثرة لتجربة مفهومة ومترتبة.",
     socialProof: {
         text: "متعلّم خاضوا تجربة يُسر التعليمية",
-        count: "+500",
+        count: "+4k",
         images: [
-            "/assets/بروفايل.webp",
-            "/assets/ai.webp",
-            "/assets/amr.webp",
-            "/assets/IMG_0052.webp"
+            "/assets/student-1.jpeg",
+            "/assets/student-2.jpeg",
+            "/assets/student-3.jpeg",
+            "/assets/student-4.jpg"
         ]
     },
     cta: {
