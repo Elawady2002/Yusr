@@ -113,4 +113,11 @@ export const INSTRUCTORS_DATA = [
         company: "Booking.com",
         linkedin: "https://www.linkedin.com/in/saratarek-/",
     },
+    {
+        name: "إسلام مغازي",
+        role: "UX Designer & Mentor",
+        image: "/assets/eslam.jpeg",
+        company: "Yusr",
+        linkedin: "https://www.linkedin.com/in/eslammoghazyux1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
 ];
