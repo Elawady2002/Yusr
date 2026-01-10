@@ -47,7 +47,7 @@ export function Footer() {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                                <span className="dir-ltr text-right hover:text-primary transition-colors cursor-pointer">+20 100 000 0000</span>
+                                <span dir="ltr" className="text-right hover:text-primary transition-colors cursor-pointer">+20 106 914 4823</span>
                             </li>
                         </ul>
                     </div>

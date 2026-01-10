@@ -12,7 +12,11 @@ const TARGET_FILES = [
     'ai.jpg',
     'IMG_0052.jpg',
     'kareem_yousry.jpeg',
-    '1738272331493.jpeg'
+    '1738272331493.jpeg',
+    'student-1.jpeg',
+    'student-2.jpeg',
+    'student-3.jpeg',
+    'student-4.jpg'
 ];
 
 async function optimize() {
@@ -33,10 +37,15 @@ async function optimize() {
             const metadata = await sharp(inputPath).metadata();
             console.log(`Processing ${file} (${metadata.width}x${metadata.height})...`);
 
-            // Resize only if width > 800px to save space, otherwise keep original
-            // Using logic: if width > 800, resize to 800.
             const pipeline = sharp(inputPath);
-            if (metadata.width > 800) {
+
+            // Special logic for student avatars - make them small
+            if (file.startsWith('student-')) {
+                if (metadata.width > 200) {
+                    pipeline.resize({ width: 200 });
+                }
+            } else if (metadata.width > 800) {
+                // Formatting standard optimization
                 pipeline.resize({ width: 800 });
             }
 
