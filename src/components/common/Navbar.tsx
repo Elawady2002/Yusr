@@ -16,6 +16,7 @@ const navigation = [
 
 
     { name: "من نحن", href: "/about" },
+    { name: "الفعاليات", href: "/events" },
 ];
 
 export function Navbar() {

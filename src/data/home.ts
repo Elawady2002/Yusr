@@ -1,7 +1,7 @@
 export const HERO_DATA = {
     title: {
         prefix: "بدل ما تتعلم كتير…",
-        highlight: "اتعلّم يُسر"
+        highlight: "اتعلّم بيُسر"
     },
     description: "أكاديمية تعليمية بتقدّم Bootcamps متخصصة في UI/UX، بنحوّل التعلّم من معلومات مبعثرة لتجربة مفهومة ومترتبة.",
     socialProof: {
