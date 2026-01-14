@@ -51,7 +51,7 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
         setIsLoading(true);
 
         try {
-            await fetch("https://script.google.com/macros/s/AKfycbwrU792Y5cPL6kjjP8uSpvCmGAkcnt_9xS_n8BTOnExUvTT1_4AIIwMLzNkCG5Ym_hT/exec", {
+            await fetch("https://script.google.com/macros/s/AKfycbzHjxIgejrdk5XQqbEcOJ7uaF1iYrPEFP_lmwxe0cFgLEpyI00CfoR_XfWVPhFaczFf/exec", {
                 method: "POST",
                 mode: "no-cors",
                 headers: {
