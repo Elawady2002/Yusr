@@ -21,7 +21,7 @@ export default function EventsPage() {
             />
 
             {/* 1. Hero Section */}
-            <section className="relative overflow-hidden py-20 lg:py-32">
+            <section className="relative overflow-hidden pt-20 pb-10 lg:pt-32 lg:pb-16">
                 <div className="container px-4 md:px-6 mx-auto">
                     <div className="flex flex-col items-center text-center space-y-8">
                         <Badge variant="outline" className="px-4 py-1.5 text-sm border-primary/20 bg-primary/5 text-primary">
@@ -44,7 +44,7 @@ export default function EventsPage() {
                             <div className="hidden md:block w-px h-6 bg-border" />
                             <div className="flex items-center gap-2">
                                 <Clock className="w-5 h-5 text-primary" />
-                                <span>10:00 صباحًا</span>
+                                <span>10 ص : 3 م</span>
                             </div>
                             <div className="hidden md:block w-px h-6 bg-border" />
                             <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ export default function EventsPage() {
                                 className="flex items-center gap-2 hover:text-primary transition-colors hover:underline group"
                             >
                                 <MapPin className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-                                <span>ITI - فرع الزقازيق</span>
+                                <span>الزقازيق</span>
                             </a>
                         </div>
 
@@ -86,7 +86,7 @@ export default function EventsPage() {
 
             {/* 2. About the Event */}
             {/* 2. About the Event */}
-            <section className="py-16 md:py-24 bg-muted/30">
+            <section className="py-12 md:py-16 bg-muted/30">
                 <div className="container px-4 md:px-6 mx-auto">
                     <div className="flex flex-col items-center text-center space-y-12">
                         <div className="space-y-6 max-w-3xl mx-auto">
@@ -120,37 +120,7 @@ export default function EventsPage() {
                             </div>
                         </div>
 
-                        <div className="relative w-full max-w-4xl aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
-                            {/* Fallback for Image - Replace with actual event image if available */}
-                            <Image
-                                src="/assets/iti.jpeg"
-                                alt="Event Highlight"
-                                fill
-                                className="object-cover object-top"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent pointer-events-none" />
 
-                            {/* Floating Location Card */}
-                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-full max-w-sm px-4">
-                                <a
-                                    href="https://maps.app.goo.gl/sco2QZPd7ojxnGNw7"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-4 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-white/20 hover:scale-105 transition-all duration-300 group"
-                                >
-                                    <div className="bg-primary/10 p-3 rounded-xl group-hover:bg-primary transition-colors">
-                                        <MapPin className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
-                                    </div>
-                                    <div className="flex flex-col flex-1 text-right">
-                                        <span className="font-bold text-foreground">ITI - فرع الزقازيق</span>
-                                        <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">اضغط لعرض الموقع على الخريطة</span>
-                                    </div>
-                                    <div className="bg-muted p-2 rounded-lg">
-                                        <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:-translate-x-1 transition-transform" />
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
