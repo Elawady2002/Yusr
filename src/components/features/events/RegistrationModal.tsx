@@ -74,7 +74,7 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-md text-right p-0 overflow-hidden border-none shadow-2xl [&>button]:left-4 [&>button]:right-auto" dir="rtl">
+            <DialogContent className="w-[calc(100%-32px)] sm:w-full sm:max-w-md text-right p-0 overflow-hidden border-none shadow-2xl [&>button]:left-4 [&>button]:right-auto rounded-[32px] sm:rounded-[32px]" dir="rtl">
                 {isSuccess ? (
                     <div className="flex flex-col items-center justify-center p-8 space-y-6 text-center animate-in zoom-in-95 duration-300">
                         <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-2">
