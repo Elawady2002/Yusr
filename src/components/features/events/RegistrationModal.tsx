@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
     Dialog,
     DialogContent,
@@ -11,23 +10,52 @@ import {
     DialogTitle,
     DialogDescription,
 } from "@/components/ui/dialog";
-
-import { User, Phone, Mail, Loader2, Send, IdCard, CheckCircle2, MessageCircle } from "lucide-react";
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui/form";
+import { User, Phone, Mail, Loader2, Send, IdCard, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
 interface RegistrationModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
+const formSchema = z.object({
+    name: z
+        .string()
+        .min(2, "الاسم قصير جدا")
+        .regex(/^[\u0600-\u06FF\s]+$/, "الاسم يجب أن يكون باللغة العربية فقط"),
+    nationalId: z
+        .string()
+        .length(14, "الرقم القومي يجب أن يكون 14 رقم"),
+    whatsapp: z
+        .string()
+        .min(10, "رقم الواتساب غير صحيح")
+        .max(15, "رقم الواتساب غير صحيح"),
+    email: z.string().email("البريد الإلكتروني غير صحيح"),
+});
+
 export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
     const [isLoading, setIsLoading] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
-    const [formData, setFormData] = useState({
-        name: "",
-        nationalId: "",
-        whatsapp: "",
-        email: "",
+
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            name: "",
+            nationalId: "",
+            whatsapp: "",
+            email: "",
+        },
     });
 
     // Reset form when modal closes
@@ -36,18 +64,13 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
             // Short timeout to allow fade-out animation before resetting
             const timer = setTimeout(() => {
                 setIsSuccess(false);
-                setFormData({ name: "", nationalId: "", whatsapp: "", email: "" });
+                form.reset();
             }, 300);
             return () => clearTimeout(timer);
         }
-    }, [isOpen]);
+    }, [isOpen, form]);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const onSubmit = async (values: z.infer<typeof formSchema>) => {
         setIsLoading(true);
 
         try {
@@ -57,10 +80,10 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(values),
             });
 
-            console.log("Registration Data:", formData);
+            console.log("Registration Data:", values);
             // Show success view instead of alert
             setIsLoading(false);
             setIsSuccess(true);
@@ -123,89 +146,114 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
                             </DialogHeader>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="p-6 space-y-5">
-                            <div className="space-y-2">
-                                <Label htmlFor="name" className="text-sm font-medium">الاسم بالكامل</Label>
-                                <div className="relative">
-                                    <User className="absolute right-3 top-2.5 h-5 w-5 text-muted-foreground" />
-                                    <Input
-                                        id="name"
-                                        placeholder="اكتب اسمك هنا"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                        className="pr-10 h-11 bg-muted/30 focus:bg-background transition-colors"
-                                    />
-                                </div>
-                            </div>
+                        <Form {...form}>
+                            <form onSubmit={form.handleSubmit(onSubmit)} className="p-6 space-y-5">
+                                <FormField
+                                    control={form.control}
+                                    name="name"
+                                    render={({ field }) => (
+                                        <FormItem className="space-y-2 text-right">
+                                            <FormLabel className="text-sm font-medium">الاسم بالكامل (باللغة العربية)</FormLabel>
+                                            <FormControl>
+                                                <div className="relative">
+                                                    <User className="absolute right-3 top-2.5 h-5 w-5 text-muted-foreground" />
+                                                    <Input
+                                                        placeholder="اكتب اسمك رباعي باللغة العربية"
+                                                        className="pr-10 h-11 bg-muted/30 focus:bg-background transition-colors"
+                                                        {...field}
+                                                    />
+                                                </div>
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
 
-                            <div className="space-y-2">
-                                <Label htmlFor="nationalId" className="text-sm font-medium">الرقم القومي</Label>
-                                <div className="relative">
-                                    <IdCard className="absolute right-3 top-2.5 h-5 w-5 text-muted-foreground" />
-                                    <Input
-                                        id="nationalId"
-                                        placeholder="اكتب رقمك القومي (14 رقم)"
-                                        value={formData.nationalId}
-                                        onChange={handleChange}
-                                        required
-                                        maxLength={14}
-                                        minLength={14}
-                                        className="pr-10 h-11 bg-muted/30 focus:bg-background transition-colors"
-                                    />
-                                </div>
-                            </div>
+                                <FormField
+                                    control={form.control}
+                                    name="nationalId"
+                                    render={({ field }) => (
+                                        <FormItem className="space-y-2 text-right">
+                                            <FormLabel className="text-sm font-medium">الرقم القومي</FormLabel>
+                                            <FormControl>
+                                                <div className="relative">
+                                                    <IdCard className="absolute right-3 top-2.5 h-5 w-5 text-muted-foreground" />
+                                                    <Input
+                                                        placeholder="اكتب رقمك القومي (14 رقم)"
+                                                        maxLength={14}
+                                                        className="pr-10 h-11 bg-muted/30 focus:bg-background transition-colors"
+                                                        {...field}
+                                                    />
+                                                </div>
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
 
-                            <div className="space-y-2">
-                                <Label htmlFor="whatsapp" className="text-sm font-medium">رقم الواتساب</Label>
-                                <div className="relative">
-                                    <Phone className="absolute right-3 top-2.5 h-5 w-5 text-muted-foreground" />
-                                    <Input
-                                        id="whatsapp"
-                                        type="tel"
-                                        placeholder="01xxxxxxxxx"
-                                        value={formData.whatsapp}
-                                        onChange={handleChange}
-                                        required
-                                        className="pr-10 h-11 bg-muted/30 focus:bg-background transition-colors"
-                                    />
-                                </div>
-                            </div>
+                                <FormField
+                                    control={form.control}
+                                    name="whatsapp"
+                                    render={({ field }) => (
+                                        <FormItem className="space-y-2 text-right">
+                                            <FormLabel className="text-sm font-medium">رقم الواتساب</FormLabel>
+                                            <FormControl>
+                                                <div className="relative">
+                                                    <Phone className="absolute right-3 top-2.5 h-5 w-5 text-muted-foreground" />
+                                                    <Input
+                                                        type="tel"
+                                                        placeholder="01xxxxxxxxx"
+                                                        className="pr-10 h-11 bg-muted/30 focus:bg-background transition-colors"
+                                                        {...field}
+                                                    />
+                                                </div>
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
 
-                            <div className="space-y-2">
-                                <Label htmlFor="email" className="text-sm font-medium">البريد الإلكتروني</Label>
-                                <div className="relative">
-                                    <Mail className="absolute right-3 top-2.5 h-5 w-5 text-muted-foreground" />
-                                    <Input
-                                        id="email"
-                                        type="email"
-                                        placeholder="example@gmail.com"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                        className="pr-10 h-11 bg-muted/30 focus:bg-background transition-colors"
-                                    />
-                                </div>
-                            </div>
+                                <FormField
+                                    control={form.control}
+                                    name="email"
+                                    render={({ field }) => (
+                                        <FormItem className="space-y-2 text-right">
+                                            <FormLabel className="text-sm font-medium">البريد الإلكتروني</FormLabel>
+                                            <FormControl>
+                                                <div className="relative">
+                                                    <Mail className="absolute right-3 top-2.5 h-5 w-5 text-muted-foreground" />
+                                                    <Input
+                                                        type="email"
+                                                        placeholder="example@gmail.com"
+                                                        className="pr-10 h-11 bg-muted/30 focus:bg-background transition-colors"
+                                                        {...field}
+                                                    />
+                                                </div>
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
 
-                            <Button
-                                type="submit"
-                                className="w-full h-12 text-lg font-bold mt-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all"
-                                disabled={isLoading}
-                            >
-                                {isLoading ? (
-                                    <>
-                                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                                        جاري التسجيل...
-                                    </>
-                                ) : (
-                                    <>
-                                        تأكيد التسجيل
-                                        <Send className="mr-2 h-5 w-5" />
-                                    </>
-                                )}
-                            </Button>
-                        </form>
+                                <Button
+                                    type="submit"
+                                    className="w-full h-12 text-lg font-bold mt-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all"
+                                    disabled={isLoading}
+                                >
+                                    {isLoading ? (
+                                        <>
+                                            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                                            جاري التسجيل...
+                                        </>
+                                    ) : (
+                                        <>
+                                            تأكيد التسجيل
+                                            <Send className="mr-2 h-5 w-5" />
+                                        </>
+                                    )}
+                                </Button>
+                            </form>
+                        </Form>
                     </>
                 )}
 
@@ -213,3 +261,4 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
         </Dialog >
     );
 }
+
