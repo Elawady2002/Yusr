@@ -39,7 +39,7 @@ export default function EventsPage() {
                         <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base text-muted-foreground border-y border-border/50 py-6 w-full max-w-3xl">
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-5 h-5 text-primary" />
-                                <span>الاثنين، 26 يناير</span>
+                                <span>الخميس، 29 يناير</span>
                             </div>
                             <div className="hidden md:block w-px h-6 bg-border" />
                             <div className="flex items-center gap-2">
