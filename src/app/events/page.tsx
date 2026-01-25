@@ -53,7 +53,7 @@ export default function EventsPage() {
                             </div>
                             <div className="hidden md:block w-px h-6 bg-border" />
                             <a
-                                href="https://maps.app.goo.gl/sco2QZPd7ojxnGNw7"
+                                href="https://maps.app.goo.gl/w2xXASf9gPiaffkK6?g_st=ipc"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 hover:text-primary transition-colors hover:underline group"
