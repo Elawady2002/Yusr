@@ -4,12 +4,13 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Clock, ArrowRight, Video, CheckCircle2, Star, User, Ticket } from "lucide-react";
+import { Calendar, MapPin, Clock, ArrowRight, Video, CheckCircle2, Star, User, Ticket, Lock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { RegistrationModal } from "@/components/features/events/RegistrationModal";
 
 export default function EventsPage() {
+    const isRegistrationClosed = true;
     const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
     return (
@@ -66,11 +67,24 @@ export default function EventsPage() {
                         <div className="flex flex-col sm:flex-row gap-4 min-w-[200px]">
                             <Button
                                 size="lg"
-                                className="text-lg px-8 h-14 rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all font-bold group"
-                                onClick={() => setIsRegistrationOpen(true)}
+                                className={`text-lg px-8 h-14 rounded-full shadow-lg transition-all font-bold group ${isRegistrationClosed
+                                    ? "bg-slate-200 text-slate-500 hover:bg-slate-200 shadow-none cursor-not-allowed"
+                                    : "shadow-primary/20 hover:shadow-primary/40"
+                                    }`}
+                                onClick={() => !isRegistrationClosed && setIsRegistrationOpen(true)}
+                                disabled={isRegistrationClosed}
                             >
-                                سجّل مكانك دلوقتي
-                                <ArrowRight className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+                                {isRegistrationClosed ? (
+                                    <>
+                                        الحجز اكتمل
+                                        <Lock className="w-5 h-5 mr-2" />
+                                    </>
+                                ) : (
+                                    <>
+                                        سجّل مكانك دلوقتي
+                                        <ArrowRight className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+                                    </>
+                                )}
                             </Button>
                         </div>
 

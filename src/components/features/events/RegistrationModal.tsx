@@ -18,7 +18,7 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
-import { User, Phone, Mail, Loader2, Send, IdCard, CheckCircle2 } from "lucide-react";
+import { User, Phone, Mail, Loader2, Send, IdCard, CheckCircle2, XCircle } from "lucide-react";
 import Image from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -95,10 +95,37 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
         }
     };
 
+    const isRegistrationClosed = false;
+
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent className="w-[calc(100%-32px)] sm:w-full sm:max-w-md text-right p-0 overflow-hidden border-none shadow-2xl [&>button]:left-4 [&>button]:right-auto rounded-[32px] sm:rounded-[32px]" dir="rtl">
-                {isSuccess ? (
+                {isRegistrationClosed ? (
+                    <div className="flex flex-col items-center justify-center p-8 space-y-6 text-center animate-in zoom-in-95 duration-300">
+                        <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-2">
+                            <XCircle className="w-10 h-10 text-red-600" />
+                        </div>
+
+                        <div className="space-y-2">
+                            <h2 className="text-2xl font-bold text-foreground">للأسف الحجز اكتمل!</h2>
+                            <p className="text-muted-foreground text-lg">
+                                بنعتذر جداً، العدد المطلوب اكتمل.
+                                <br />
+                                تابعنا عشان تلحق تحجز في الإيفنتات الجاية.
+                            </p>
+                        </div>
+
+                        <div className="w-full pt-4">
+                            <Button
+                                variant="outline"
+                                className="w-full text-primary border-primary hover:bg-primary hover:text-white transition-colors h-12 text-lg"
+                                onClick={onClose}
+                            >
+                                إغلاق
+                            </Button>
+                        </div>
+                    </div>
+                ) : isSuccess ? (
                     <div className="flex flex-col items-center justify-center p-8 space-y-6 text-center animate-in zoom-in-95 duration-300">
                         <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-2">
                             <CheckCircle2 className="w-10 h-10 text-green-600" />
