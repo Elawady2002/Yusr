@@ -77,13 +77,12 @@ export function Hero() {
                     <div className="relative aspect-4/3 rounded-[2.5rem] overflow-hidden bg-transparent shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-gray-100">
                         {/* Hero Image */}
                         <div className="relative w-full h-full px-4">
-                            <video
-                                src="/assets/يسر.mp4"
-                                className="object-cover w-full h-full"
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
+                            <Image
+                                src="/assets/photoـamir.jpg"
+                                alt="أمير يسري"
+                                fill
+                                className="object-cover"
+                                priority
                             />
                         </div>
 
