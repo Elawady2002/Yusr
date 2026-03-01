@@ -56,9 +56,9 @@ export default function EventsPage() {
                     </div>
 
                     <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight text-[#1e293b] leading-[1.2] max-w-5xl mx-auto drop-shadow-sm animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-                        يوم الانطلاق هيبدأ بقوة
+                        رحلتك في تعلم التقنية
                         <br />
-                        <span className="text-[#334155] text-4xl md:text-6xl lg:text-[4.5rem] mt-4 block">مع مبدعين على القمة</span>
+                        <span className="text-[#334155] text-4xl md:text-6xl lg:text-[4.5rem] mt-4 block">تبدأ مع يُسر</span>
                     </h1>
 
                     {/* Custom Arrow Decoration */}
@@ -75,25 +75,21 @@ export default function EventsPage() {
                     {events.map((event, index) => (
                         <div
                             key={event.id}
-                            className={`group relative w-full sm:w-[calc(50%-0.75rem)] max-w-[380px] flex flex-col rounded-[2.5rem] bg-white border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 overflow-hidden animate-in fade-in slide-in-from-bottom-12 delay-[400ms]`}
+                            className={`group relative w-full sm:w-[calc(50%-0.75rem)] max-w-[340px] flex flex-col rounded-3xl bg-white border border-slate-100 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.04)] hover:shadow-[0_15px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-500 overflow-hidden animate-in fade-in slide-in-from-bottom-12 delay-[400ms]`}
                             style={{ animationFillMode: 'both', animationDelay: `${300 + index * 150}ms` }}
                         >
                             {/* Image container */}
-                            <div className="relative w-full h-52 md:h-60 overflow-hidden p-3 md:p-3 pb-0">
-                                <Link href={event.href} className="block relative w-full h-full rounded-[2rem] overflow-hidden bg-slate-50 flex items-center justify-center">
+                            <div className="relative w-full aspect-[4/3] rounded-t-3xl overflow-hidden bg-slate-50">
+                                <Link href={event.href} className="block relative w-full h-full">
                                     <Image
                                         src={event.image}
                                         alt={event.title}
-                                        width={400}
-                                        height={300}
-                                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    {/* Overlay Gradient for contrast */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
                                     {/* Status Badge */}
-                                    <div className="absolute top-3 right-3 z-10">
-                                        <span className={`px-4 py-1.5 rounded-full text-xs font-bold shadow-md flex items-center gap-1.5 ${event.badgeColor}`}>
+                                    <div className="absolute top-4 right-4 z-10">
+                                        <span className={`px-4 py-1.5 rounded-full text-xs font-bold shadow-sm flex items-center gap-1.5 ${event.badgeColor}`}>
                                             {event.badgeText}
                                         </span>
                                     </div>
@@ -101,30 +97,25 @@ export default function EventsPage() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-6 flex flex-col flex-1">
-                                <Link href={event.href} className="block w-fit text-center mx-auto w-full">
-                                    <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">{event.title}</h3>
+                            <div className="p-6 md:p-7 flex flex-col flex-1 items-center bg-white text-center">
+                                <Link href={event.href} className="block w-full mb-3">
+                                    <h3 className="text-xl md:text-2xl font-extrabold text-slate-800 line-clamp-2 group-hover:text-primary transition-colors">{event.title}</h3>
                                 </Link>
 
-                                <p className="text-slate-500 mb-6 text-center line-clamp-2 leading-relaxed text-sm md:text-base font-medium px-2">{event.description}</p>
+                                <p className="text-slate-500 mb-6 line-clamp-2 leading-relaxed text-[15px] font-medium px-2">{event.description}</p>
 
-                                <div className="flex flex-wrap justify-center gap-y-3 gap-x-4 text-[13px] md:text-sm font-bold text-slate-600 mb-6 mt-auto bg-slate-50/80 p-3.5 rounded-2xl border border-slate-100 shadow-inner">
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-6 h-6 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                                            <Calendar className="w-3 h-3 text-primary" />
-                                        </div>
+                                {/* Date/Time/Location Pills */}
+                                <div className="flex flex-wrap justify-center gap-y-3 gap-x-5 text-[13px] font-bold text-slate-600 mb-8 mt-auto w-full border-t border-slate-100/80 pt-5">
+                                    <div className="flex items-center gap-1.5">
+                                        <Calendar className="w-4 h-4 text-[#52B788]" />
                                         <span>{event.date}</span>
                                     </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-6 h-6 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                                            <Clock className="w-3 h-3 text-primary" />
-                                        </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <Clock className="w-4 h-4 text-[#52B788]" />
                                         <span>{event.time}</span>
                                     </div>
-                                    <div className="flex items-center gap-2 w-full justify-center mt-1">
-                                        <div className="w-6 h-6 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
-                                            <MapPin className="w-3 h-3 text-primary" />
-                                        </div>
+                                    <div className="flex items-center gap-1.5 w-full justify-center mt-1">
+                                        <MapPin className="w-4 h-4 text-[#52B788]" />
                                         <span>{event.location}</span>
                                     </div>
                                 </div>
@@ -133,7 +124,7 @@ export default function EventsPage() {
                                 <div className="w-full">
                                     <Button
                                         asChild
-                                        className={`w-full h-11 rounded-xl text-base font-bold transition-all shadow-lg hover:-translate-y-0.5 ${event.isActive ? 'bg-[#52B788] hover:bg-[#40916C] text-white shadow-[#52B788]/25 hover:shadow-[#52B788]/40' : 'bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-900 shadow-sm hover:shadow-md'}`}
+                                        className={`w-full h-12 rounded-full text-base font-bold transition-all hover:-translate-y-0.5 ${event.isActive ? 'bg-[#52B788] hover:bg-[#40916C] text-white shadow-lg shadow-[#52B788]/20' : 'bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-900 shadow-sm'}`}
                                     >
                                         <Link href={event.href}>{event.status}</Link>
                                     </Button>
