@@ -1,0 +1,114 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { PlayCircle, Users } from "lucide-react";
+import { HERO_DATA } from "@/data/home";
+
+export function Hero() {
+    return (
+        <section className="relative overflow-hidden bg-background py-16 md:py-24 lg:py-32">
+            <div className="container-responsive relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                {/* Right Content (Text) */}
+                <div
+                    className="flex flex-col items-start text-start space-y-8"
+                >
+                    {/* Compact Social Proof Badge */}
+                    <div
+                        className="inline-flex items-center gap-4 rounded-full border border-gray-100 bg-white px-8 py-2.5 shadow-xl shadow-gray-200/50 cursor-default mb-6 overflow-hidden w-fit"
+                    >
+                        <div className="flex -space-x-4 rtl:space-x-reverse">
+                            {HERO_DATA.socialProof.images.map((src, i) => (
+                                <div key={i} className="w-10 h-10 rounded-full border-[3px] border-white bg-gray-100 relative overflow-hidden ring-1 ring-gray-100">
+                                    <Image
+                                        src={src}
+                                        alt="User"
+                                        fill
+                                        className="object-cover"
+                                        sizes="40px"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex flex-col items-start">
+                            <div className="flex items-center gap-1.5 font-bold text-gray-900">
+                                <div className="flex text-yellow-500 text-sm">
+                                    {[1, 2, 3, 4, 5].map(s => <span key={s} className="drop-shadow-sm">★</span>)}
+                                </div>
+                                <span className="text-lg leading-none pt-1">{HERO_DATA.socialProof.count}</span>
+                            </div>
+                            <span className="text-xs font-semibold text-gray-500 leading-tight">{HERO_DATA.socialProof.text}</span>
+                        </div>
+                    </div>
+
+                    <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-tight pt-4">
+                        {HERO_DATA.title.prefix}
+                        <br />
+                        {HERO_DATA.title.highlight}
+                    </h1>
+
+                    <p className="text-base text-muted-foreground md:text-xl max-w-2xl leading-relaxed">
+                        {HERO_DATA.description}
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-6">
+                        <Button size="lg" className="w-full sm:w-auto text-lg font-bold py-6 px-8 h-14 rounded-full shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all" asChild>
+                            <Link href={HERO_DATA.cta.primary.href}>
+                                <span className="flex items-center gap-2">
+                                    <Users className="w-6 h-6" />
+                                    <span>{HERO_DATA.cta.primary.label}</span>
+                                </span>
+                            </Link>
+                        </Button>
+                        <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg py-6 px-8 h-14 rounded-full border-2 hover:bg-muted/50 hover:text-primary flex items-center justify-center gap-3" asChild>
+                            <Link href={HERO_DATA.cta.secondary.href} target="_blank">
+                                <span className="font-bold">{HERO_DATA.cta.secondary.label}</span>
+                            </Link>
+                        </Button>
+                    </div>
+                </div>
+
+                {/* Left Content (Image/Visual) */}
+                <div
+                    className="relative mx-auto w-full max-w-[600px] lg:max-w-none"
+                >
+                    <div className="relative aspect-4/3 rounded-[2.5rem] overflow-hidden bg-transparent shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-gray-100">
+                        {/* Hero Image */}
+                        <div className="relative w-full h-full">
+                            <Image
+                                src="/assets/photoـamir.jpg"
+                                alt="Hero Image"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+
+                    </div>
+
+                    {/* Floating Card - Repositioned */}
+                    <div className="relative mt-6 w-full md:absolute md:bottom-8 md:left-1/2 md:-translate-x-1/2 md:w-[calc(100%-4rem)] md:mt-0 bg-white/90 backdrop-blur-xl border border-white/50 p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-between gap-4 animate-in slide-in-from-bottom-6 duration-700 delay-300">
+                        <div className="flex items-center gap-5">
+                            <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <PlayCircle className="w-7 h-7 fill-current" />
+                            </div>
+                            <div>
+                                <p className="font-bold text-lg text-foreground mb-0.5">{HERO_DATA.floatingCard.title}</p>
+                                <p className="text-sm font-medium text-muted-foreground">{HERO_DATA.floatingCard.subtitle}</p>
+                            </div>
+                        </div>
+                        <div className="w-12 h-12 relative shrink-0">
+                            <span className="absolute inset-0 rounded-full border-[3px] border-primary/20 border-t-primary animate-spin-slow"></span>
+                        </div>
+                    </div>
+
+                    {/* Back decoration blobs */}
+                    <div className="absolute -top-16 -right-16 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] -z-10 mix-blend-multiply" />
+                    <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-primary/10 rounded-full blur-[100px] -z-10 mix-blend-multiply" />
+                </div>
+            </div>
+        </section>
+    );
+}

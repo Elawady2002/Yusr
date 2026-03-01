@@ -1,0 +1,272 @@
+[00:43:51.307] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.308] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.309] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.309] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.309] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.309] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.309] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.309] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.310] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.310] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.310] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.310] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.310] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.310] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:51.310] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:52.036] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+[00:43:52.038] Browser ERROR   ./src/app/globals.css:19426:18
+Parsing CSS source code failed
+  19424 |   }
+  19425 |   .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+> 19426 |     &>div.min-h-[350px] {
+        |                  ^
+  19427 |       padding: calc(var(--spacing) * 6);
+  19428 |     }
+  19429 |   }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }.
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
