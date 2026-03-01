@@ -113,28 +113,38 @@ export default function AIHandoffSprintPage() {
                                     </DialogHeader>
 
                                     {isSuccess ? (
-                                        <div className="py-10 text-center flex flex-col items-center gap-4">
-                                            <div className="w-16 h-16 bg-[#E8F5E9] text-[#2E7D32] rounded-full flex items-center justify-center text-3xl mb-2">
+                                        <div className="py-10 text-center flex flex-col items-center gap-5">
+                                            <div className="w-20 h-20 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center text-4xl mb-2 shadow-inner border border-emerald-100">
                                                 ✓
                                             </div>
-                                            <h3 className="text-xl font-bold text-slate-800">تم تسجيل بياناتك بنجاح!</h3>
-                                            <p className="text-slate-500">سنتواصل معك قريباً عبر الواتساب لتأكيد الحجز ومشاركتك التفاصيل.</p>
+                                            <h3 className="text-2xl font-extrabold text-slate-800">تم تسجيل بياناتك بنجاح!</h3>
+                                            <p className="text-slate-500 text-base font-medium leading-relaxed max-w-sm">
+                                                شكراً لاهتمامك بمعسكر The AI Handoff Sprint. يرجى الانضمام لمجتمع الواتساب لمتابعة كافة التحديثات وتأكيد الحجز.
+                                            </p>
+                                            <Button
+                                                asChild
+                                                className="w-full h-14 rounded-xl text-base font-bold bg-[#25D366] hover:bg-[#128C7E] text-white mt-4 shadow-lg shadow-[#25D366]/20 transition-all hover:-translate-y-0.5"
+                                            >
+                                                <a href="https://chat.whatsapp.com/CwUVkaUPN5CG7chImE2WD0" target="_blank" rel="noopener noreferrer">
+                                                    انضم لمجتمع الواتساب الآن
+                                                </a>
+                                            </Button>
                                         </div>
                                     ) : (
-                                        <form onSubmit={handleSubmit} className="space-y-5 pt-4">
-                                            <div className="space-y-2 text-right">
+                                        <form onSubmit={handleSubmit} className="space-y-6 pt-4">
+                                            <div className="space-y-2.5 text-right">
                                                 <label htmlFor="name" className="text-sm font-bold text-slate-700">الاسم بالكامل</label>
-                                                <Input id="name" name="name" required placeholder="أحمد محمد" className="text-right h-12 rounded-xl bg-slate-50 border-slate-200" />
+                                                <Input id="name" name="name" required placeholder="أحمد محمد" className="text-right h-14 rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-primary/20 focus-visible:border-primary transition-colors text-base" />
                                             </div>
-                                            <div className="space-y-2 text-right">
+                                            <div className="space-y-2.5 text-right">
                                                 <label htmlFor="email" className="text-sm font-bold text-slate-700">البريد الإلكتروني</label>
-                                                <Input id="email" name="email" type="email" required placeholder="example@email.com" className="text-right h-12 rounded-xl bg-slate-50 border-slate-200" dir="ltr" />
+                                                <Input id="email" name="email" type="email" required placeholder="example@email.com" className="text-right h-14 rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-primary/20 focus-visible:border-primary transition-colors text-base" dir="ltr" />
                                             </div>
-                                            <div className="space-y-2 text-right">
+                                            <div className="space-y-2.5 text-right">
                                                 <label htmlFor="phone" className="text-sm font-bold text-slate-700">رقم الواتساب</label>
-                                                <Input id="phone" name="phone" type="tel" required placeholder="010XXXXXXXX" className="text-right h-12 rounded-xl bg-slate-50 border-slate-200" dir="ltr" />
+                                                <Input id="phone" name="phone" type="tel" required placeholder="010XXXXXXXX" className="text-right h-14 rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-primary/20 focus-visible:border-primary transition-colors text-base" dir="ltr" />
                                             </div>
-                                            <Button type="submit" disabled={isSubmitting} className="w-full h-12 rounded-xl text-base font-bold bg-[#52B788] hover:bg-[#40916C] mt-2">
+                                            <Button type="submit" disabled={isSubmitting} className="w-full h-14 rounded-xl text-lg font-bold bg-[#52B788] hover:bg-[#40916C] mt-4 shadow-lg shadow-[#52B788]/20 transition-all hover:-translate-y-0.5">
                                                 {isSubmitting ? "جاري الإرسال..." : "أرسل البيانات"}
                                             </Button>
                                         </form>
