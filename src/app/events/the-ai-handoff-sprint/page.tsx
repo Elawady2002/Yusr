@@ -32,19 +32,22 @@ export default function AIHandoffSprintPage() {
 
         try {
             // Posting directly to Google Apps Script
-            const response = await fetch("https://script.google.com/macros/s/AKfycbzoP8R1eqa6fe95yGPej5bhuFZEr6n5XOxABTdFy_8P1MynHxu7z9Q7Vkya_YyexrBU/exec", {
+            // mode: "no-cors" is required because Google redirects to a URL that does not allow CORS for POST.
+            await fetch("https://script.google.com/macros/s/AKfycbzoP8R1eqa6fe95yGPej5bhuFZEr6n5XOxABTdFy_8P1MynHxu7z9Q7Vkya_YyexrBU/exec", {
                 method: "POST",
-                body: JSON.stringify(data), // Sending as text/plain to avoid CORS preflight, script parses it as JSON
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8",
+                },
+                body: JSON.stringify(data),
             });
 
-            if (response.ok) {
-                setIsSuccess(true);
-            } else {
-                alert("حدث خطأ أثناء التسجيل. يرجى المحاولة لاحقاً.");
-            }
+            // With no-cors, the response is opaque (response.ok is false, status is 0).
+            // If it didn't throw a network error, we assume success.
+            setIsSuccess(true);
         } catch (error) {
             console.error(error);
-            alert("حدث خطأ أثناء التسجيل. يرجى المحاولة لاحقاً.");
+            alert("حدث خطأ في الاتصال بالانترنت. يرجى المحاولة لاحقاً.");
         } finally {
             setIsSubmitting(false);
         }
