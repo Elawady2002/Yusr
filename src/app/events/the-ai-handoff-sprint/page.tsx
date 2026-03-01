@@ -31,7 +31,7 @@ export default function AIHandoffSprintPage() {
         params.append("phone", formData.get("phone") as string);
 
         try {
-            await fetch("https://script.google.com/macros/s/AKfycbzoP8R1eqa6fe95yGPej5bhuFZEr6n5XOxABTdFy_8P1MynHxu7z9Q7Vkya_YyexrBU/exec", {
+            await fetch("https://script.google.com/macros/s/AKfycbw9Ka3VUzQHpQJzSte1dKw28AKXN392w0f20Lm8CvOHBA2l-j3R068Od0BGcH5BFLkF/exec", {
                 method: "POST",
                 mode: "no-cors",
                 headers: {
