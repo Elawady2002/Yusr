@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Clock, MoveLeft, Sparkles } from "lucide-react";
+import { Calendar, MapPin, Clock, MoveLeft, Sparkles, Users } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,16 +9,17 @@ const events = [
     {
         id: "the-ai-handoff-sprint",
         title: "The AI Handoff Sprint",
-        date: "قريباً",
-        time: "يعلن لاحقاً",
+        date: "السبت والأحد 7 و 8",
+        time: "الموعد لاحقاً",
         location: "أونلاين (Zoom)",
+        seats: "80 مقعد",
         description: "تعلم كيفية تسليم تصاميمك للمطورين كالمحترفين باستخدام أدوات الذكاء الاصطناعي في بيئة عمل حقيقية وتطبيق عملي خطوة بخطوة.",
-        image: "/assets/ai.webp",
+        image: "/assets/image.png",
         href: "/events/the-ai-handoff-sprint",
         status: "عرض التفاصيل",
         isActive: true,
         badgeText: "قريباً",
-        badgeColor: "bg-primary text-white"
+        badgeColor: "bg-[#52B788] text-white shadow-[#52B788]/20"
     },
     {
         id: "yusr-inaugural",
@@ -26,32 +27,33 @@ const events = [
         date: "الخميس، 29 يناير",
         time: "10 ص : 3 م",
         location: "الزقازيق",
+        seats: "اكتمل العدد",
         description: "يُسر | أول Bootcamp Experience حقيقية. مش بنعلّمك أكتر… بنعلّمك صح. يوم كامل من التطبيق العملي والمحاضرات المكثفة.",
         image: "/assets/Post_Cover.png",
         href: "/events/yusr-inaugural",
         status: "عن اللقاء",
         isActive: false,
         badgeText: "انتهى",
-        badgeColor: "bg-slate-100/90 text-slate-600 backdrop-blur-md"
+        badgeColor: "bg-slate-200/80 text-slate-700 backdrop-blur-md"
     }
 ];
 
 export default function EventsPage() {
     return (
-        <div className="min-h-screen bg-slate-50/50 pb-24">
+        <div className="min-h-screen bg-[#F8FAFC] pb-24">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden flex flex-col items-center justify-center text-center">
+            <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden flex flex-col items-center justify-center text-center">
                 {/* 3D Grid Background */}
                 <div className="absolute inset-0 -z-10 h-full w-full bg-slate-50/50 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
                 {/* Glow Effect */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#52B788]/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
                 <div className="container px-4 relative z-10 flex flex-col items-center">
 
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 shadow-sm mb-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                        <Sparkles className="w-5 h-5 text-primary" />
+                    <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white border border-slate-200/60 shadow-sm mb-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <Sparkles className="w-5 h-5 text-[#52B788]" />
                         <span className="text-sm md:text-base font-bold text-slate-700">فعاليات يُسر القادمة</span>
                     </div>
 
@@ -70,26 +72,29 @@ export default function EventsPage() {
             </section>
 
             {/* Events Grid Section */}
-            <section className="container mx-auto px-4 mt-4 relative z-10">
-                <div className="flex flex-wrap justify-center gap-6 max-w-[850px] mx-auto">
+            <section className="container mx-auto px-4 mt-2 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-[1000px] mx-auto">
                     {events.map((event, index) => (
                         <div
                             key={event.id}
-                            className={`group relative w-full sm:w-[calc(50%-0.75rem)] max-w-[340px] flex flex-col rounded-3xl bg-white border border-slate-100 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.04)] hover:shadow-[0_15px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-1.5 transition-all duration-500 overflow-hidden animate-in fade-in slide-in-from-bottom-12 delay-[400ms]`}
+                            className={`group relative flex flex-col rounded-[2.5rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-slate-200/60 hover:-translate-y-2 transition-all duration-500 overflow-hidden animate-in fade-in slide-in-from-bottom-12 delay-[400ms]`}
                             style={{ animationFillMode: 'both', animationDelay: `${300 + index * 150}ms` }}
                         >
                             {/* Image container */}
-                            <div className="relative w-full aspect-[4/3] rounded-t-3xl overflow-hidden bg-slate-50">
-                                <Link href={event.href} className="block relative w-full h-full">
+                            <div className="relative w-full aspect-[4/3] sm:aspect-video md:aspect-[4/3] overflow-hidden bg-slate-50">
+                                <Link href={event.href} className="block relative w-full h-full border-b border-slate-100">
                                     <Image
                                         src={event.image}
                                         alt={event.title}
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
+                                    {/* Overlay Gradient */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                     {/* Status Badge */}
-                                    <div className="absolute top-4 right-4 z-10">
-                                        <span className={`px-4 py-1.5 rounded-full text-xs font-bold shadow-sm flex items-center gap-1.5 ${event.badgeColor}`}>
+                                    <div className="absolute top-5 right-5 z-10">
+                                        <span className={`px-5 py-2 rounded-2xl text-sm font-bold shadow-lg flex items-center gap-1.5 transition-transform group-hover:scale-105 ${event.badgeColor}`}>
                                             {event.badgeText}
                                         </span>
                                     </div>
@@ -97,26 +102,30 @@ export default function EventsPage() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-6 md:p-7 flex flex-col flex-1 items-center bg-white text-center">
-                                <Link href={event.href} className="block w-full mb-3">
-                                    <h3 className="text-xl md:text-2xl font-extrabold text-slate-800 line-clamp-2 group-hover:text-primary transition-colors">{event.title}</h3>
+                            <div className="p-8 md:p-10 flex flex-col flex-1 bg-white">
+                                <Link href={event.href} className="block w-full mb-4 text-right">
+                                    <h3 className="text-2xl md:text-3xl font-extrabold text-slate-800 line-clamp-2 group-hover:text-[#52B788] transition-colors leading-tight">{event.title}</h3>
                                 </Link>
 
-                                <p className="text-slate-500 mb-6 line-clamp-2 leading-relaxed text-[15px] font-medium px-2">{event.description}</p>
+                                <p className="text-slate-500 mb-8 line-clamp-3 leading-relaxed text-base font-medium text-right">{event.description}</p>
 
-                                {/* Date/Time/Location Pills */}
-                                <div className="flex flex-wrap justify-center gap-y-3 gap-x-5 text-[13px] font-bold text-slate-600 mb-8 mt-auto w-full border-t border-slate-100/80 pt-5">
-                                    <div className="flex items-center gap-1.5">
-                                        <Calendar className="w-4 h-4 text-[#52B788]" />
+                                {/* Date/Time/Location/Seats Pills */}
+                                <div className="grid grid-cols-2 gap-3 text-sm font-bold text-slate-700 mb-10 mt-auto" dir="rtl">
+                                    <div className="flex items-center gap-2.5 bg-slate-50 px-4 py-3 rounded-2xl border border-slate-100">
+                                        <Calendar className="w-5 h-5 text-[#52B788]" />
                                         <span>{event.date}</span>
                                     </div>
-                                    <div className="flex items-center gap-1.5">
-                                        <Clock className="w-4 h-4 text-[#52B788]" />
+                                    <div className="flex items-center gap-2.5 bg-slate-50 px-4 py-3 rounded-2xl border border-slate-100">
+                                        <Clock className="w-5 h-5 text-[#52B788]" />
                                         <span>{event.time}</span>
                                     </div>
-                                    <div className="flex items-center gap-1.5 w-full justify-center mt-1">
-                                        <MapPin className="w-4 h-4 text-[#52B788]" />
+                                    <div className="flex items-center gap-2.5 bg-slate-50 px-4 py-3 rounded-2xl border border-slate-100">
+                                        <MapPin className="w-5 h-5 text-[#52B788]" />
                                         <span>{event.location}</span>
+                                    </div>
+                                    <div className="flex items-center gap-2.5 bg-slate-50 px-4 py-3 rounded-2xl border border-slate-100">
+                                        <Users className="w-5 h-5 text-[#52B788]" />
+                                        <span>{event.seats}</span>
                                     </div>
                                 </div>
 
@@ -124,7 +133,7 @@ export default function EventsPage() {
                                 <div className="w-full">
                                     <Button
                                         asChild
-                                        className={`w-full h-12 rounded-full text-base font-bold transition-all hover:-translate-y-0.5 ${event.isActive ? 'bg-[#52B788] hover:bg-[#40916C] text-white shadow-lg shadow-[#52B788]/20' : 'bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-900 shadow-sm'}`}
+                                        className={`w-full h-14 rounded-2xl text-lg font-bold transition-all hover:-translate-y-1 ${event.isActive ? 'bg-[#52B788] hover:bg-[#40916C] text-white shadow-xl shadow-[#52B788]/25' : 'bg-white border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-900 shadow-sm'}`}
                                     >
                                         <Link href={event.href}>{event.status}</Link>
                                     </Button>
