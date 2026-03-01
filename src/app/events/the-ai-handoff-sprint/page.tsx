@@ -24,26 +24,24 @@ export default function AIHandoffSprintPage() {
         setIsSubmitting(true);
 
         const formData = new FormData(e.currentTarget);
-        const data = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            phone: formData.get("phone"),
-        };
+        // Create an application/x-www-form-urlencoded string to avoid CORS JSON preflight
+        const params = new URLSearchParams();
+        params.append("name", formData.get("name") as string);
+        params.append("email", formData.get("email") as string);
+        params.append("phone", formData.get("phone") as string);
 
         try {
-            // Posting directly to Google Apps Script
-            // mode: "no-cors" is required because Google redirects to a URL that does not allow CORS for POST.
             await fetch("https://script.google.com/macros/s/AKfycbzoP8R1eqa6fe95yGPej5bhuFZEr6n5XOxABTdFy_8P1MynHxu7z9Q7Vkya_YyexrBU/exec", {
                 method: "POST",
                 mode: "no-cors",
                 headers: {
-                    "Content-Type": "text/plain;charset=utf-8",
+                    "Content-Type": "application/x-www-form-urlencoded",
                 },
-                body: JSON.stringify(data),
+                body: params.toString(),
             });
 
-            // With no-cors, the response is opaque (response.ok is false, status is 0).
-            // If it didn't throw a network error, we assume success.
+            // With no-cors, the response is opaque (response.ok is false).
+            // Always assume success unless a network error is thrown.
             setIsSuccess(true);
         } catch (error) {
             console.error(error);
@@ -54,7 +52,7 @@ export default function AIHandoffSprintPage() {
     };
 
     return (
-        <main className="min-h-screen bg-background">
+        <main className="min-h-screen bg-[#F8FAFC]">
             {/* 1. Hero Section */}
             <section className="relative overflow-hidden pt-20 pb-10 lg:pt-32 lg:pb-16">
                 <div className="container px-4 md:px-6 mx-auto">
